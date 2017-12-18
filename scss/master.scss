@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+}
+*:not(body), *:not(html) {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  display: grid;
+  height: 50vh;
+  width: 100vw;
+  background-color: lightgrey;
+}
