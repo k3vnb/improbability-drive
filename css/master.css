@@ -1,73 +1,114 @@
+/*font-family: 'Geo', sans-serif;
+font-family: 'Orbitron', sans-serif;*/
 body {
-  margin: 0; }
+  margin: 0;
+  font-family: 'Geo', sans-serif; }
 
 *:not(body), *:not(html) {
   box-sizing: border-box; }
+
 /*space*/
-.button {
-  width: 20px;
-  height: 20px;
-  background-color: blue;
-}
 .space {
   height: 50vh;
   width: 100vw;
   background-color: black;
   overflow: hidden;
-  position: relative;
-}
-.planet {
+  position: relative; }
+
+.planet-1 {
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  /*background-color: darkred;*/
   position: absolute;
-}
-.planet-1 {
-  top: 100px;
-  left: 300px;
-  background-image: url(../img/planet-1.png);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 2s ease;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+  top: 20%;
+  left: 30%;
+  background-image: url(../img/planet-1.png); }
+
 .transform-active {
   transition: all 2s ease;
   width: 200px;
-  height: 200px;
-}
-.explore {
-  display: none;
-  width: 20px;
-  height: 20px;
-  border: solid grey 2px;
+  height: 200px; }
 
-}
+.explore {
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  border: solid transparent 2px;
+  border-radius: 50%;
+  color: lime; }
+
+.explore-show {
+  visibility: visible;
+  transition-delay: 1s !important;
+  transition: all 1s ease-in;
+  border: lime solid 2px;
+  width: 20px;
+  height: 20px; }
+
+.explore:hover p {
+  margin-top: 20px;
+  display: block;
+  cursor: pointer; }
+
+.explore p {
+  display: none;
+  margin: 0;
+  margin-left: -70px;
+  font-size: 50px; }
+
 .explore-planet {
-  transition: all 5s ease;
+  transition: all 3s ease;
   margin-top: -14900px;
   margin-left: -14900px;
   width: 30000px;
-  height: 30000px;
-}
+  height: 30000px; }
+
 .alien-1 {
-  /*display: none;*/
-  width: 1px;
-  transition: all 5s ease;
-}
+  width: 1px; }
+
 .alien-grow {
-  /*display: block;*/
-  width: 300px;
-}
+  width: 400px;
+  transition: all 3s ease; }
+
+.alien-shrink {
+  width: 1px;
+  transition: all 1s ease; }
+
+.return-to-orbit {
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  border: lime solid 2px;
+  color: lime;
+  font-size: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.return-to-orbit-show {
+  visibility: visible;
+  width: 400px;
+  height: 100px;
+  font-size: 50px;
+  transition-delay: 1s !important;
+  transition: all 1s ease-in; }
+
 /*panel*/
 .wrapper {
   display: grid;
   height: 50vh;
   width: 100vw;
   background-color: lightgrey; }
+
+/*# sourceMappingURL=master.css.map */
 
 /*# sourceMappingURL=master.css.map */
