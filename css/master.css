@@ -3,7 +3,67 @@ body {
 
 *:not(body), *:not(html) {
   box-sizing: border-box; }
+/*space*/
+.button {
+  width: 20px;
+  height: 20px;
+  background-color: blue;
+}
+.space {
+  height: 50vh;
+  width: 100vw;
+  background-color: black;
+  overflow: hidden;
+  position: relative;
+}
+.planet {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  /*background-color: darkred;*/
+  position: absolute;
+}
+.planet-1 {
+  top: 100px;
+  left: 300px;
+  background-image: url(../img/planet-1.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.transform-active {
+  transition: all 2s ease;
+  width: 200px;
+  height: 200px;
+}
+.explore {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: solid grey 2px;
 
+}
+.explore-planet {
+  transition: all 5s ease;
+  margin-top: -14900px;
+  margin-left: -14900px;
+  width: 30000px;
+  height: 30000px;
+}
+.alien-1 {
+  /*display: none;*/
+  width: 1px;
+  transition: all 5s ease;
+}
+.alien-grow {
+  /*display: block;*/
+  width: 300px;
+}
+/*panel*/
 .wrapper {
   display: grid;
   height: 50vh;
