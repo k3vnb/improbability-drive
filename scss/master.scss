@@ -14,7 +14,6 @@ div {
 *:not(body), *:not(html) {
   box-sizing: border-box;
 }
-
 .ctrl-pnl {
   display: grid;
   height: 50vh;
@@ -44,6 +43,7 @@ div {
 .btn-grid-raised {
   background-color: $gold1;
 }
+
 .ctrl-pnl.grid-6 {
     grid-template-columns: 2fr 1fr 2fr 2fr 1fr 2fr;
 }
