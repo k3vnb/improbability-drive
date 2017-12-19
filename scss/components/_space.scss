@@ -28,6 +28,11 @@
   height: 30000px;
   z-index: 10;
 }
+@mixin explore-text {
+  font-size: 1px;
+  color: lime;
+  margin: 0;
+}
 @mixin return-to-orbit {
   visibility: hidden;
   width: 1px;
@@ -108,17 +113,29 @@
   width: 20px;
   height: 20px;
 }
-.explore:hover p {
-  margin-top: 20px;
-  display: block;
-  cursor: pointer;
+.explore-text-1 {
+  @include explore-text;
 }
-.explore p {
-  display: none;
-  margin: 0;
-  margin-left: -70px;
+.explore-text-2 {
+  @include explore-text;
+}
+.explore-text-3 {
+  @include explore-text;
+}
+.explore-text-4 {
+  @include explore-text;
+}
+.explore-text-5 {
+  @include explore-text;
+}
+.explore-text-show {
+  transition: all 2s ease-in;
   font-size: 50px;
 }
+.explore:hover  {
+  cursor: pointer;
+}
+
 .explore-planet-1 {
   margin-top: -14900px;
   margin-left: -14900px;

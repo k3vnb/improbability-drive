@@ -476,16 +476,37 @@ div {
   width: 20px;
   height: 20px; }
 
-.explore:hover p {
-  margin-top: 20px;
-  display: block;
-  cursor: pointer; }
+.explore-text-1 {
+  font-size: 1px;
+  color: lime;
+  margin: 0; }
 
-.explore p {
-  display: none;
-  margin: 0;
-  margin-left: -70px;
+.explore-text-2 {
+  font-size: 1px;
+  color: lime;
+  margin: 0; }
+
+.explore-text-3 {
+  font-size: 1px;
+  color: lime;
+  margin: 0; }
+
+.explore-text-4 {
+  font-size: 1px;
+  color: lime;
+  margin: 0; }
+
+.explore-text-5 {
+  font-size: 1px;
+  color: lime;
+  margin: 0; }
+
+.explore-text-show {
+  transition: all 2s ease-in;
   font-size: 50px; }
+
+.explore:hover {
+  cursor: pointer; }
 
 .explore-planet-1 {
   margin-top: -14900px;
