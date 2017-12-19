@@ -12,7 +12,6 @@ div {
   display: grid;
   height: 50vh;
   width: 100vw;
-  background-color: lightgrey;
 }
 
 .square {
@@ -20,4 +19,49 @@ div {
     padding-top: 100%;
     box-shadow: none;
     width: 100%;
+}
+
+.ctrl-pnl.grid-6 {
+    perspective: 1932px;
+    perspective-origin: 50vw 10vh;
+    position: absolute;
+    bottom: 100px;
+}
+
+body {
+    background: #000;
+}
+
+.pannel-left {
+    transform-origin: center;
+    transform: translatex(-179px) translatey(39px) translatez(-352px) rotateX(47deg) rotateY(72deg) rotateZ(-43deg);
+    width: 200%;
+    height: 100%;
+}
+
+.pannel-left-corner {
+    transform: translatex(0px) translatez(-461px) rotateX(20deg) rotateY(37deg) rotateZ(-10deg);
+    transform-origin: bottom right;
+}
+
+.pannel-center-left {
+    transform-origin: bottom right;
+    transform: translatez(-500px) rotateX(17deg) rotatey(7deg) rotateZ(-2deg);
+}
+
+.pannel-center-right {
+    transform-origin: bottom left;
+    transform: translatez(-500px) rotateX(17deg) rotatey(-7deg) rotateZ(2deg);
+}
+
+.pannel-right-corner {
+    transform: translatex(0px) translatez(-461px) rotateX(20deg) rotateY(-37deg) rotateZ(10deg);
+    transform-origin: bottom left;
+}
+
+.pannel-right {
+    transform-origin: center;
+    transform: translatex(-179px) translatey(39px) translatez(-352px) rotateX(47deg) rotateY(-72deg) rotateZ(43deg);
+    width: 190%;
+    height: 100%;
 }
