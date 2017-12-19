@@ -82,6 +82,8 @@
   transition: all 2s ease;
   width: 200px;
   height: 200px;
+  top: 25%;
+  left: 45%;
 }
 .explore-1 {
   @include explore;
@@ -190,4 +192,8 @@
 }
 .on-top {
   z-index: 100;
+}
+.go-away {
+  transition:  all .1s ease-in;
+  opacity: 0 !important;
 }
