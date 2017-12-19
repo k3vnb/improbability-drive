@@ -89,7 +89,7 @@ div {
 
 .ctrl-pnl.grid-6 {
   perspective: 1932px;
-  perspective-origin: 50vw 10vh;
+  perspective-origin: 50vw 30vh;
   position: absolute;
   bottom: 100px;
   z-index: 99; }
@@ -253,7 +253,7 @@ div {
   width: 100%;
   background-color: grey;
   border-radius: 50%;
-  box-shadow: -2px 3px 0 black; }
+  box-shadow: -4px 2px 2px black; }
 
 .radar-1, .radar-2 {
   display: flex;
