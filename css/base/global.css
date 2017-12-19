@@ -1,0 +1,22 @@
+body {
+  margin: 0; }
+
+div {
+  box-shadow: 1px 1px 3px #00000080; }
+
+*:not(body), *:not(html) {
+  box-sizing: border-box; }
+
+.ctrl-pnl {
+  display: grid;
+  height: 50vh;
+  width: 100vw;
+  background-color: lightgrey; }
+
+.square {
+  position: relative;
+  padding-top: 100%;
+  box-shadow: none;
+  width: 100%; }
+
+/*# sourceMappingURL=global.css.map */

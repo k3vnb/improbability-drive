@@ -1,0 +1,26 @@
+.btn-grid-raised {
+  background-color: $gold1;
+}
+.btn-grid-raised.grid-6
+ div {
+    box-shadow: none;
+}
+
+
+.pannel-left .btn-grid-flat:not(.thin) {
+    grid-row: span 2;
+}
+.pannel-left .btn-grid-flat {
+  background-color: $gold2;
+}
+
+.btn-grid-flat div {
+ background-color: $flat-button-brown;
+}
+.pannel-right-corner .btn-grid-flat {
+  background-color: $gold1;
+}
+.pannel-right .btn-grid-flat {
+    grid-row: span 2;
+    background-color: $gold-light;
+}
