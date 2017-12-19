@@ -1,5 +1,7 @@
 $(document).ready(function(){
-
+  $(".wiper-1").click(function() {
+    $('.wiper-1, wiper-2').toggleClass('wipe');
+  });
 
   $(".planet-1").click(function() {
     $('.planet-1').toggleClass('transform-active');
