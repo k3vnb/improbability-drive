@@ -2,6 +2,8 @@ $(document).ready(function(){
   $(".planet-1").click(function() {
     $('.planet-1').toggleClass('transform-active');
     $('.explore-1').toggleClass('explore-show');
+    $('.explore-2, .explore-3, .explore-4, .explore-5').removeClass('explore-show');
+    $('.planet-2, .planet-3, .planet-4, .planet-5').removeClass('transform-active');
   });
   $(".explore-1").click(function() {
     $('.planet-1').toggleClass('explore-planet-1')
@@ -24,6 +26,8 @@ $(document).ready(function(){
   $(".planet-2").click(function() {
     $('.planet-2').toggleClass('transform-active');
     $('.explore-2').toggleClass('explore-show');
+    $('.explore-1, .explore-3, .explore-4, .explore-5').removeClass('explore-show');
+    $('.planet-1, .planet-3, .planet-4, .planet-5').removeClass('transform-active');
   });
   $(".explore-2").click(function() {
     $('.planet-2').toggleClass('explore-planet-2')
@@ -46,6 +50,8 @@ $(document).ready(function(){
   $(".planet-3").click(function() {
     $('.planet-3').toggleClass('transform-active');
     $('.explore-3').toggleClass('explore-show');
+    $('.explore-2, .explore-1, .explore-4, .explore-5').removeClass('explore-show');
+    $('.planet-2, .planet-1, .planet-4, .planet-5').removeClass('transform-active');
   });
   $(".explore-3").click(function() {
     $('.planet-3').toggleClass('explore-planet-3')
@@ -68,6 +74,8 @@ $(document).ready(function(){
   $(".planet-4").click(function() {
     $('.planet-4').toggleClass('transform-active');
     $('.explore-4').toggleClass('explore-show');
+    $('.explore-2, .explore-3, .explore-1, .explore-5').removeClass('explore-show');
+    $('.planet-2, .planet-3, .planet-1, .planet-5').removeClass('transform-active');
   });
   $(".explore-4").click(function() {
     $('.planet-4').toggleClass('explore-planet-4')
@@ -90,6 +98,8 @@ $(document).ready(function(){
   $(".planet-5").click(function() {
     $('.planet-5').toggleClass('transform-active');
     $('.explore-5').toggleClass('explore-show');
+    $('.explore-2, .explore-3, .explore-4, .explore-1').removeClass('explore-show');
+    $('.planet-2, .planet-3, .planet-4, .planet-1').removeClass('transform-active');
   });
   $(".explore-5").click(function() {
     $('.planet-5').toggleClass('explore-planet-5')
