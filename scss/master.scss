@@ -1,16 +1,10 @@
-
-body {
-  margin: 0;
-}
-*:not(body), *:not(html) {
-  box-sizing: border-box;
-}
-
-.wrapper {
-  display: grid;
-  height: 50vh;
-  width: 100vw;
-  background-color: lightgrey;
-}
-
 @import "components/warp";
+@import "base/global";
+@import "variables/color";
+@import "layout/grid";
+@import "components/dials";
+@import "components/flat-btn-grid";
+@import "components/grid-raised";
+@import "components/radar";
+@import "animation/infinite";
+@import "animation/travel";

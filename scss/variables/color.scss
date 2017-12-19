@@ -1,0 +1,14 @@
+$gold1: #baa684;
+$gold2: #b5a47e;
+$gold-light: #e2cd97;
+$flat-button-brown: #8f5240;
+$flat-button-brown-shadow: #240000;
+
+
+@for $i from 1 through 4 {
+  // $x: $i*20;
+  .ring.r#{$i} {
+    width: #{$i * 20%};
+    height: #{$i * 20%};
+  }
+}
