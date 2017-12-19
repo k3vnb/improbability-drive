@@ -89,5 +89,20 @@ $(document).ready(function(){
     $('.planet-5').toggleClass('transform-active');
     $('.explore-5').toggleClass('explore-show');
   })
-
 });
+
+$(document).ready(function(e) {
+    $('body').click(function(e) {
+      var xPercent = e.pageX / $(window).width();
+      var yPercent = e.pageY / $(window).height();
+      // var xPosition = Math.floor(xPercent*100);
+      // var yPosition = Math.floor(yPercent*100);
+      var xPosition = Math.floor(xPercent*100);
+      var yPosition = Math.floor(yPercent*100);
+      console.log(xPosition);
+      console.log(yPosition);
+      $('#warp').css({perspectiveOrigin: xPosition + "vw " + yPosition + "vh"});
+
+
+    });
+  });
