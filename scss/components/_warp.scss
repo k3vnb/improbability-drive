@@ -13,13 +13,18 @@ html body {
   display: inline-block;
   vertical-align: middle;
   perspective: 5px;
-  // perspective-origin: 0em 24em;
-  transition: perspective-origin 2s;
-  // &:active {
-  //   perspective-origin: 50vw 20vh;
-  // }
 }
+.center-warp {
+  animation: centralize 1s ease;
+}
+@keyframes centralize {
+  from {
 
+  }
+  to {
+    perspective-origin: 50vw 20vh;
+  }
+}
 .space {
   position: absolute;
   width: 100vw;

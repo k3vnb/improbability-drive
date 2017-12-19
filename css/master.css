@@ -11,9 +11,14 @@ html body {
   top: 0;
   display: inline-block;
   vertical-align: middle;
-  perspective: 5px;
-  transition: perspective-origin 2s; }
+  perspective: 5px; }
 
+.center-warp {
+  animation: centralize 1s ease; }
+
+@keyframes centralize {
+  to {
+    perspective-origin: 50vw 20vh; } }
 .space {
   position: absolute;
   width: 100vw;
