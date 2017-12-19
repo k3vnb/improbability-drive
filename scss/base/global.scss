@@ -26,6 +26,8 @@ div {
     perspective-origin: 50vw 10vh;
     position: absolute;
     bottom: 100px;
+    z-index: 99;
+
 }
 
 body {

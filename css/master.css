@@ -91,7 +91,8 @@ div {
   perspective: 1932px;
   perspective-origin: 50vw 10vh;
   position: absolute;
-  bottom: 100px; }
+  bottom: 100px;
+  z-index: 99; }
 
 body {
   background: #000; }
@@ -321,18 +322,14 @@ div {
     content: "";
     background: linear-gradient(-20deg, #2bbfa8, transparent 51%); }
 
-@keyframes scan {
-  from {
-    transform: rotate(0deg); }
-  to {
-    transform: rotate(360deg); } }
 /*space*/
 .planets {
   height: 50vh;
   width: 100vw;
-  background-color: black;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  z-index: 50;
+  background: transparent; }
 
 .planet-1 {
   width: 20px;
@@ -613,5 +610,11 @@ div {
   font-size: 50px;
   transition-delay: 1s !important;
   transition: all 1s ease-in; }
+
+@keyframes scan {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(360deg); } }
 
 /*# sourceMappingURL=master.css.map */
