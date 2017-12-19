@@ -48,9 +48,6 @@
   background: transparent;
 }
 
-.planets {
-
-}
 .planet-1 {
   @include planet;
   top: 20%;
@@ -190,4 +187,7 @@
   font-size: 50px;
   transition-delay: 1s !important;
   transition: all 1s ease-in;
+}
+.on-top {
+  z-index: 100;
 }

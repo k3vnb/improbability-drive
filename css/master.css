@@ -611,6 +611,9 @@ div {
   transition-delay: 1s !important;
   transition: all 1s ease-in; }
 
+.on-top {
+  z-index: 100; }
+
 @keyframes scan {
   from {
     transform: rotate(0deg); }
