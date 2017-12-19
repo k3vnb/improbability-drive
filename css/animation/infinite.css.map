@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAAA,eAOC;EANC,IAAK;IACH,SAAS,EAAE,YAAY;EAEzB,EAAG;IACD,SAAS,EAAE,cAAc",
-"sources": ["../../scss/animation/infinite.scss"],
-"names": [],
-"file": "infinite.css"
-}
