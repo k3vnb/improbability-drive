@@ -152,7 +152,7 @@ $(document).ready(function(e) {
       console.log(xPosition);
       console.log(yPosition);
       $('#warp').css({perspectiveOrigin: xPosition + "vw " + yPosition + "vh"});
-      $('#warp').addClass("center-warp").delay(1000).queue(function(next){
+      $('#warp').addClass("center-warp").delay(5000).queue(function(next){
         $('#warp').removeClass("center-warp");
         next();
       });

@@ -11,14 +11,26 @@ html body {
   top: 0;
   display: inline-block;
   vertical-align: middle;
-  perspective: 5px; }
+  perspective: 1000000px; }
 
 .center-warp {
-  animation: centralize 1s ease; }
+  animation: centralize 4s cubic-bezier(0.55, -0.01, 0.2, 0.99), warpSpeed 4s cubic-bezier(1, 0, 1, 0); }
 
 @keyframes centralize {
   to {
     perspective-origin: 50vw 20vh; } }
+@keyframes warpSpeed {
+  0% {
+    animation-timing-function: cubic-bezier(0, 0.9, 0, 1); }
+  20% {
+    perspective: 5px;
+    animation-timing-function: linear; }
+  80% {
+    perspective: 5px;
+    animation-timing-function: cubic-bezier(1, 0, 0.9, 0); }
+  100% {
+    perspective: 1000000px;
+    animation-timing-function: cubic-bezier(1, 0, 1, 0); } }
 .space {
   position: absolute;
   width: 100vw;
@@ -346,7 +358,7 @@ div {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: all 2s ease;
+  transition: all 2s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -363,7 +375,7 @@ div {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: all 2s ease;
+  transition: all 2s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -380,7 +392,7 @@ div {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: all 2s ease;
+  transition: all 2s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -397,7 +409,7 @@ div {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: all 2s ease;
+  transition: all 2s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -414,7 +426,7 @@ div {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: all 2s ease;
+  transition: all 2s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -424,7 +436,7 @@ div {
   background-image: url(../img/planet-5.png); }
 
 .transform-active {
-  transition: all 2s ease;
+  transition: all 5s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   width: 200px;
   height: 200px;
   top: 25%;
