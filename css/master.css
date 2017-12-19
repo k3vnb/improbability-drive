@@ -76,6 +76,10 @@ div {
 *:not(body), *:not(html) {
   box-sizing: border-box; }
 
+img {
+  width: 100%;
+  height: 100%; }
+
 .ctrl-pnl {
   display: grid;
   height: 50vh;
@@ -321,6 +325,10 @@ div {
     bottom: 0;
     content: "";
     background: linear-gradient(-20deg, #2bbfa8, transparent 51%); }
+
+.oscilloscope.round img {
+  border-radius: 50%;
+  border: 3px solid #b7b7b7; }
 
 /*space*/
 .planets {
