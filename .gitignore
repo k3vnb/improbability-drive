@@ -1,0 +1,4 @@
+# ignore docs files
+
+.sass-cache
+.sass-catch/*

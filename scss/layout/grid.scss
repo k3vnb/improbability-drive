@@ -1,0 +1,69 @@
+
+
+@for $i from 1 through 6 {
+  .grid-#{$i}{
+    display: grid;
+    grid-template-columns: repeat($i, 1fr);
+  }
+}
+
+.pannel-left {
+    grid-template-rows: 2fr 1fr 1fr;
+}
+.ctrl-pnl.grid-6 {
+    grid-template-columns: 2fr 1fr 2fr 2fr 1fr 2fr;
+}
+.pannel-center-left.grid-4 {
+  grid-template-rows: 1fr 1fr 2fr;
+}
+
+.compass {grid-column: span 2;grid-row: span 2;}
+
+.btns-column.btn-lg.grid-1 {grid-row: span 2;}
+
+.oscilloscope-2 {
+    grid-column: span 3;
+}
+
+.pannel-center-right.grid-4 {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+
+.throttle {grid-row-start: 2;}
+
+.radar-1 {
+    grid-row: span 2;
+    grid-column-start: 2;
+}
+
+.pannel-center-right.grid-4 {
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr 3fr;
+}
+
+.throttle {
+    grid-row-start: 2;
+}
+
+.radar-1 {
+    grid-row: span 2;
+    grid-column-start: 2;
+}
+.pannel-right.grid-3 {
+    grid-template-rows: 4fr 1fr 3fr;
+}
+.knobs.grid-4 {
+    grid-column: span 2;
+}
+
+.pnl {
+    padding: 10px;
+    grid-gap: 10px;
+    background: linear-gradient(-45deg, #3b5a76, #aabdcc);
+    > div {
+        grid-gap: 5px;
+        padding: 5px;
+    }
+}

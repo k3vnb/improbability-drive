@@ -1,0 +1,73 @@
+.radar-1, .radar-2 {
+    display: flex;
+    align-items: center;
+}
+
+.border {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 3px solid #b7b7b7;
+    background: linear-gradient(-45deg, #042b25, #678680);
+    box-shadow: inset 0 0 35px, 0 0 0 3px;
+    overflow: hidden;
+}
+.border div {
+    border: 2px solid #2abfa8;
+}
+
+.ring {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow: none;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.x-line {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    height: 1px;
+    margin: auto;
+    border: 1px solid #2abfa8!important;
+}
+
+.y-line {
+    position: absolute;
+    height: 100%;
+    left: 0;
+    right: 0;
+    width: 1px;
+    margin: auto;
+    border: 1px solid #2abfa8!important;
+}
+
+.scanner {
+    position: absolute;
+    left: 50%;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    height: 1px;
+    margin: auto;
+    margin-right: 0;
+    transform-origin: left;
+    transform: rotate(45deg);
+    border: 1px solid #2abfa8!important;
+    animation: scan 15s linear infinite;
+    &:after {
+      position: absolute;
+      top: -50px;
+      width: 102%;
+      bottom: 0;
+      content: "";
+      background: linear-gradient(-20deg, #2bbfa8, transparent 51%);
+  }
+}
