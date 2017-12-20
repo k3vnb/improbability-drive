@@ -27,3 +27,66 @@
         background: black;
     }
 }
+
+@keyframes purpleBlink {
+    0%{
+        background: #af2aff;
+    }
+    30% {
+        background: black;
+    }
+    33% {
+        background: #d1ecff;
+    }
+    63%{
+        background: black;
+    }
+    66%{
+        background: #265dff;
+    }
+    97%{
+        background: black;
+    }
+}
+
+@keyframes orangeBlink {
+    0%{
+        background: #ff8f00;
+    }
+    30% {
+        background: black;
+    }
+    33% {
+        background: #d6ff00;
+    }
+    63%{
+        background: black;
+    }
+    66%{
+        background: #ff2710;
+    }
+    97%{
+        background: black;
+    }
+}
+
+@keyframes greenBlink {
+    0%{
+        background: #02ff00;
+    }
+    30% {
+        background: black;
+    }
+    33% {
+        background: #d6ff00;
+    }
+    63%{
+        background: black;
+    }
+    66%{
+        background: #00a20e;
+    }
+    97%{
+        background: black;
+    }
+}
