@@ -11,7 +11,7 @@ html body {
   top: 0;
   display: inline-block;
   vertical-align: middle;
-  perspective: 1000000px; }
+  perspective: 100000000px; }
 
 .center-warp {
   animation: centralize 4s cubic-bezier(0.55, -0.01, 0.2, 0.99), warpSpeed 4s cubic-bezier(1, 0, 1, 0); }
@@ -21,7 +21,8 @@ html body {
     perspective-origin: 50vw 20vh; } }
 @keyframes warpSpeed {
   0% {
-    animation-timing-function: cubic-bezier(0, 0.9, 0, 1); }
+    animation-timing-function: cubic-bezier(0, 0.9, 0, 1);
+    perspective: 1000000px; }
   20% {
     perspective: 5px;
     animation-timing-function: linear; }
@@ -348,27 +349,27 @@ body {
     background-color: #3eff3e;
     box-shadow: inset 0 0 5px #fff, 0 0 5px #3eff3e, 0 0px 11px 4px #00000059; }
   .dial.dial-1 .led-1 {
-    animation: blueBlink 1.3s 0s infinite; }
+    animation: blueBlink 1.4s 0s infinite; }
   .dial.dial-1 .led-2 {
-    animation: blueBlink 1.5s 0.44s infinite; }
+    animation: blueBlink 1.6s 0.44s infinite; }
   .dial.dial-1 .led-3 {
     animation: blueBlink 1.9s 0.88s infinite; }
   .dial.dial-2 .led-1 {
-    animation: orangeBlink 2.8s 0s infinite; }
+    animation: orangeBlink 2.3s 0s infinite; }
   .dial.dial-2 .led-2 {
     animation: orangeBlink 3s 0.44s infinite; }
   .dial.dial-2 .led-3 {
-    animation: orangeBlink 2.3s 0.88s infinite; }
+    animation: orangeBlink 2.4s 0.88s infinite; }
   .dial.dial-3 .led-1 {
     animation: purpleBlink 3.7s 0s infinite; }
   .dial.dial-3 .led-2 {
-    animation: purpleBlink 3.8s 0.44s infinite; }
+    animation: purpleBlink 3.1s 0.44s infinite; }
   .dial.dial-3 .led-3 {
     animation: purpleBlink 3.9s 0.88s infinite; }
   .dial.dial-4 .led-1 {
-    animation: greenBlink 4.3s 0s infinite; }
+    animation: greenBlink 4.8s 0s infinite; }
   .dial.dial-4 .led-2 {
-    animation: greenBlink 4.3s 0.44s infinite; }
+    animation: greenBlink 4.8s 0.44s infinite; }
   .dial.dial-4 .led-3 {
     animation: greenBlink 4.3s 0.88s infinite; }
 
@@ -733,7 +734,7 @@ img#ship {
   background-image: url(../img/planet-6.png); }
 
 .transform-active {
-  transition: all 5s cubic-bezier(0.55, -0.01, 0.2, 0.99);
+  transition: all 4s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   width: 200px;
   height: 200px;
   top: 25%;
