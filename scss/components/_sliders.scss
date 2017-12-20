@@ -3,14 +3,11 @@
   display: flex;
   align-items: flex-end;
 }
-.red {
-  background-color: red!important;
-  height: 90%!important;
-}
+
 .transparent {
-  background-color: #e8151591!important;
-  animation: hide-hyper-space .5s linear!important;
-  // height: 90%!important;
+  background-color: #d9230f!important;
+  animation: hide-hyper-space 1s linear infinite!important;
+  height: 90%!important;
 }
 
 
@@ -80,17 +77,32 @@
     height: 30%;
   }
 }
-// @keyframes hide-hyper-space {
-//   0% {
-//     display: none;
-//   }
-//   20% {
-//     display: block;
-//   }
-//   60% {
-//     display: none;
-//   }
-//   80% {
-//     display: block;
-//   }
-// }
+@keyframes hide-hyper-space {
+  0% {
+
+  }
+  10% {
+    background-color: white;
+  }
+  25% {
+    background-color: #d9230f;
+  }
+  35% {
+    background-color: white;
+    height: 95%;
+  }
+  45% {
+    background-color: red;
+    height: 100%;
+  }
+  60% {
+    background-color: white;
+    height: 95%;
+  }
+  75% {
+    background-color: #d9230f;
+  }
+  90% {
+    background-color: white;
+  }
+}

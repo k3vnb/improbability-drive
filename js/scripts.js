@@ -164,13 +164,10 @@ $(document).ready(function(e) {
   });
   $(document).ready(function() {
     $('.planets > div').click(function() {
-      $('.meter').addClass("transparent");
-      $('.sliders > div').addClass("red").delay(2000).queue(function(next) {
-        $('.sliders > div').removeClass("red");
-        next();
+      $('.meter').addClass("transparent").delay(4000).queue(function(next) {
         $('.meter').removeClass("transparent");
+        next();
       });
-
     });
 
-  })
+  });
