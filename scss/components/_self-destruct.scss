@@ -38,3 +38,18 @@
   }
 
 }
+
+@keyframes btn-blink {
+    0% {
+        background:black;
+    }
+    49%{
+        background: black;
+    }
+    50%{
+        background:red;
+    }
+    100% {
+        background:red;
+    }
+}

@@ -24,6 +24,12 @@
         animation: borderBlink#{$i} #{$d}s #{$d / 5}s infinite;
     }
 }
+@for $i from 1 through 5{
+    $d: $i / 5;
+    .self-destruct-animation .btn-grid-flat div:nth-child(#{$i}n){
+        animation: btn-blink #{$d}s #{$d / 5}s infinite;
+    }
+}
 .pannel-right-corner .btn-grid-flat {
   background-color: $gold1;
 }
