@@ -85,7 +85,8 @@ div {
   position: relative;
   padding-top: 100%;
   box-shadow: none;
-  width: 100%; }
+  width: 100%;
+  height: 0; }
 
 .ctrl-pnl.grid-6 {
   perspective: 1932px;
@@ -220,9 +221,58 @@ body {
     grid-gap: 5px;
     padding: 5px; }
 
-.dials div {
+.dial {
   border-radius: 50%;
-  background-color: #eae8d8; }
+  background-color: #525252;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset -45px -45px 100px #00000087, 0px 1px 4px 2px black;
+  border: 1px solid #484848; }
+  .dial span {
+    position: absolute;
+    top: 0px;
+    right: 4px;
+    bottom: 0;
+    left: calc(54% + 12px);
+    height: 6px;
+    background: #000;
+    margin: auto;
+    border-radius: 50%;
+    transform-origin: -17px; }
+  .dial .led-1 {
+    background-color: #2af5ff;
+    box-shadow: inset 0 0 5px #fff, 0 1px 2px #2af5ff, 0 0px 11px 4px #00000059; }
+  .dial .led-2 {
+    background-color: blue;
+    box-shadow: inset 0 0 5px #fff, 0 0 5px blue, 0 0px 11px 4px #00000059; }
+  .dial .led-3 {
+    background-color: #3eff3e;
+    box-shadow: inset 0 0 5px #fff, 0 0 5px #3eff3e, 0 0px 11px 4px #00000059; }
+
+.grid-item {
+  width: 44%;
+  margin: auto;
+  box-shadow: none; }
+
+.dial span:nth-of-type(1) {
+  transform: rotate(60deg); }
+
+.dial span:nth-of-type(2) {
+  transform: rotate(120deg); }
+
+.dial span:nth-of-type(3) {
+  transform: rotate(180deg); }
+
+.dial span:nth-of-type(4) {
+  transform: rotate(240deg); }
+
+.dial span:nth-of-type(5) {
+  transform: rotate(300deg); }
+
+.dial span:nth-of-type(6) {
+  transform: rotate(360deg); }
 
 .btn-grid-raised {
   background-color: #baa684; }
