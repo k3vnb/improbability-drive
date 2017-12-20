@@ -152,6 +152,9 @@ $(document).ready(function(){
       $('.planet-5').removeClass('on-top');
     }, 2000);
   })
+  $("div").click(function() {
+    $('.btn-grid-flat div').addClass('active');
+  });
 });
 
 //harlem globetrotter gif
@@ -164,10 +167,6 @@ $(document).ready(function() {
   })
 })
 //end globetrotter gif
-$(document).ready(function(){
-  $(".panel-button").click(function() {
-    $('btn-grid-flat').toggleClass('.active');
-  });
 
 $(document).ready(function(e) {
     $('.planets > div').click(function(e) {
