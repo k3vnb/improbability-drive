@@ -1,0 +1,19 @@
+.monitors {
+  height: 100%;
+  width: 100%;
+  border: 15px solid #7992a6;
+  background-color: blue;
+}
+
+#monitor1 {
+  background-image: url(../img/rc.gif);
+  background-position: right;
+}
+#monitor2 {
+  background-image: url(../img/rc2.gif);
+  background-position: center;
+}
+#monitor3 {
+  background-image: url(../img/doom.gif);
+  background-position: center;
+}
