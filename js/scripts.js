@@ -1,6 +1,6 @@
 $(document).ready(function(){
-  $(".wiper-1").click(function() {
-    $('.wiper-1, wiper-2').toggleClass('wipe');
+  $(".button").click(function() {
+    $('.explore-text-1').toggleClass('color');
   });
 
   $(".planet-1").click(function() {

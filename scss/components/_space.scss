@@ -161,6 +161,10 @@
   margin-left: -14900px;
   @include explore-planet;
 }
+
+.alien {
+  height: 0;
+}
 .alien-1 {
   width: 1px;
 }
@@ -179,6 +183,7 @@
 .alien-grow {
   width: 400px;
   transition: all 3s ease;
+  height: auto;
 }
 .alien-shrink {
   width: 1px;
