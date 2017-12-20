@@ -728,6 +728,67 @@ img#ship {
   transition: all .1s ease-in;
   opacity: 0 !important; }
 
+.wipe-animation {
+  animation: wipe 2s  infinite;
+  transform-origin: left;
+  z-index: 90; }
+
+.wiper-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .wiper-switch input[type=checkbox] {
+    margin: 0;
+    height: 0;
+    width: 0;
+    visibility: hidden; }
+  .wiper-switch label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 40px;
+    height: 20px;
+    background: grey;
+    display: block;
+    border-radius: 100px;
+    position: relative; }
+  .wiper-switch label:after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 90px;
+    transition: 0.3s; }
+  .wiper-switch input:checked + label {
+    background: #bada55; }
+  .wiper-switch input:checked + label:after {
+    left: calc(100% - 5px);
+    transform: translateX(-100%); }
+  .wiper-switch label:active:after {
+    width: 30px; }
+
+.wiper-1 {
+  position: absolute;
+  width: 35%;
+  height: 20px;
+  background-color: grey;
+  top: 50%;
+  left: 55%; }
+
+.wiper-2 {
+  position: absolute;
+  width: 35%;
+  height: 20px;
+  background-color: grey;
+  top: 50%;
+  left: 25%; }
+
+@keyframes wipe {
+  0%, 100% {
+    transform: rotate(0deg); }
+  50% {
+    transform: rotate(-100deg); } }
 @keyframes scan {
   from {
     transform: rotate(0deg); }

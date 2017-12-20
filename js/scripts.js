@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  $(".wiper-switch input").click(function() {
+    $('.wiper').toggleClass('wipe-animation');
+  });
+
   $("span.button").click(function() {
     var color = $(this).attr("data-color");
     $(".planet p").css("color", color);
