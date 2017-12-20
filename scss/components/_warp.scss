@@ -7,19 +7,56 @@ html body {
 }
 
 #warp {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
   display: inline-block;
   vertical-align: middle;
-  perspective: 5px;
-  perspective-origin: 0em 24em;
+  perspective: 1000000px;
 }
+.center-warp {
+  animation: centralize 4s cubic-bezier(0.55, -0.01, 0.2, 0.99), warpSpeed 4s cubic-bezier(1, 0, 1, 0);
+}
+@keyframes centralize {
+  from {
 
+  }
+  to {
+    perspective-origin: 50vw 20vh;
+  }
+}
+@keyframes warpSpeed {
+  0% {
+animation-timing-function: cubic-bezier(0, .9, 0, 1);
+  }
+  20% {
+    perspective: 5px;
+
+animation-timing-function: linear;
+  }
+  80% {
+    perspective: 5px;
+
+animation-timing-function: cubic-bezier(1, 0, .9, 0);
+  }
+
+  100% {
+
+    perspective: 1000000px;
+    animation-timing-function: cubic-bezier(1, 0, 1, 0);
+  }
+
+}
 .space {
   position: absolute;
-  width: 1000px;
-  height: 1000px;
-  left: -500px;
-  top: -100px;
+  width: 100vw;
+    height: 100vh;
+    left:0;
+    top:0;
+  // width: 1000px;
+  // height: 1000px;
+  // left: -500px;
+  // top: -100px;
   transform-style: preserve-3d;
   animation: move 12s infinite linear;
   animation-fill-mode: forwards;
@@ -30,7 +67,7 @@ html body {
 }
 
 .side {
-  background: url("../img/hyperdrive.jpg");
+  background: url("../img/hyperdrive.jpg") center;
   background-size: cover;
   width: 100%;
   height: 100%;

@@ -6,18 +6,37 @@ html body {
   text-align: center; }
 
 #warp {
-  position: relative;
+  position: absolute;
+  left: 0;
+  top: 0;
   display: inline-block;
   vertical-align: middle;
-  perspective: 5px;
-  perspective-origin: 0em 24em; }
+  perspective: 1000000px; }
 
+.center-warp {
+  animation: centralize 4s cubic-bezier(0.55, -0.01, 0.2, 0.99), warpSpeed 4s cubic-bezier(1, 0, 1, 0); }
+
+@keyframes centralize {
+  to {
+    perspective-origin: 50vw 20vh; } }
+@keyframes warpSpeed {
+  0% {
+    animation-timing-function: cubic-bezier(0, 0.9, 0, 1); }
+  20% {
+    perspective: 5px;
+    animation-timing-function: linear; }
+  80% {
+    perspective: 5px;
+    animation-timing-function: cubic-bezier(1, 0, 0.9, 0); }
+  100% {
+    perspective: 1000000px;
+    animation-timing-function: cubic-bezier(1, 0, 1, 0); } }
 .space {
   position: absolute;
-  width: 1000px;
-  height: 1000px;
-  left: -500px;
-  top: -100px;
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  top: 0;
   transform-style: preserve-3d;
   animation: move 12s infinite linear;
   animation-fill-mode: forwards; }
@@ -26,7 +45,7 @@ html body {
   animation-delay: 6s; }
 
 .side {
-  background: url("../img/hyperdrive.jpg");
+  background: url("../img/hyperdrive.jpg") center;
   background-size: cover;
   width: 100%;
   height: 100%;
@@ -67,6 +86,44 @@ html body {
     opacity: 1; }
   100% {
     opacity: 0; } }
+.tv {
+  height: 100%;
+  width: 100%;
+  border: 2px solid black; }
+
+.tv-show {
+  width: 99%;
+  height: 100%;
+  background-image: url(../img/fuzz.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image .5s ease; }
+
+.planet-6-gif {
+  background-image: url(../img/globetrotter.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.monitors {
+  height: 100%;
+  width: 100%;
+  border: 15px solid #7992a6;
+  background-color: blue; }
+
+#monitor1 {
+  background-image: url(../img/rc.gif);
+  background-position: right; }
+
+#monitor2 {
+  background-image: url(../img/rc2.gif);
+  background-position: center; }
+
+#monitor3 {
+  background-image: url(../img/doom.gif);
+  background-position: center; }
+
 body {
   margin: 0; }
 
@@ -291,29 +348,29 @@ body {
     background-color: #3eff3e;
     box-shadow: inset 0 0 5px #fff, 0 0 5px #3eff3e, 0 0px 11px 4px #00000059; }
   .dial.dial-1 .led-1 {
-    animation: blueBlink 1.4s 0s infinite; }
+    animation: blueBlink 1.6s 0s infinite; }
   .dial.dial-1 .led-2 {
-    animation: blueBlink 1.5s 0.44s infinite; }
+    animation: blueBlink 1.9s 0.44s infinite; }
   .dial.dial-1 .led-3 {
-    animation: blueBlink 1.7s 0.88s infinite; }
+    animation: blueBlink 1.4s 0.88s infinite; }
   .dial.dial-2 .led-1 {
-    animation: orangeBlink 2.1s 0s infinite; }
+    animation: orangeBlink 2.8s 0s infinite; }
   .dial.dial-2 .led-2 {
     animation: orangeBlink 2.7s 0.44s infinite; }
   .dial.dial-2 .led-3 {
-    animation: orangeBlink 2.2s 0.88s infinite; }
+    animation: orangeBlink 3s 0.88s infinite; }
   .dial.dial-3 .led-1 {
-    animation: purpleBlink 3.6s 0s infinite; }
+    animation: purpleBlink 3.5s 0s infinite; }
   .dial.dial-3 .led-2 {
-    animation: purpleBlink 3.6s 0.44s infinite; }
+    animation: purpleBlink 3.2s 0.44s infinite; }
   .dial.dial-3 .led-3 {
-    animation: purpleBlink 3.4s 0.88s infinite; }
+    animation: purpleBlink 3.2s 0.88s infinite; }
   .dial.dial-4 .led-1 {
-    animation: greenBlink 4.8s 0s infinite; }
+    animation: greenBlink 4.6s 0s infinite; }
   .dial.dial-4 .led-2 {
-    animation: greenBlink 4.1s 0.44s infinite; }
+    animation: greenBlink 4.6s 0.44s infinite; }
   .dial.dial-4 .led-3 {
-    animation: greenBlink 4.9s 0.88s infinite; }
+    animation: greenBlink 4.6s 0.88s infinite; }
 
 .grid-item {
   width: 44%;
@@ -542,8 +599,32 @@ img#ship {
   margin-top: -24px;
   margin-left: 3px; }
 
+.sliders > div {
+  background-color: white;
+  display: flex;
+  align-items: flex-end; }
+
+.transparent {
+  background-color: #d9230f !important;
+  animation: hide-hyper-space 1s linear infinite !important;
+  height: 90% !important; }
+
+.meter {
+  height: 40%;
+  width: 100%;
+  background-color: green; }
+
+.meter1 {
+  animation: meters 35s linear infinite; }
+
+.meter2 {
+  animation: meters 60s linear infinite; }
+
+.meter3 {
+  animation: meters 120s ease infinite; }
+
 /*space*/
-.planets {
+.planets, .new-planets {
   height: 50vh;
   width: 100vw;
   overflow: hidden;
@@ -559,11 +640,10 @@ img#ship {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: all 2s ease;
+  transition: all 2s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  overflow: hidden;
   top: 20%;
   left: 30%;
   background-image: url(../img/planet-1.png); }
@@ -576,11 +656,10 @@ img#ship {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: all 2s ease;
+  transition: all 2s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  overflow: hidden;
   top: 50%;
   left: 70%;
   background-image: url(../img/planet-2.png); }
@@ -593,11 +672,10 @@ img#ship {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: all 2s ease;
+  transition: all 2s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  overflow: hidden;
   top: 60%;
   left: 10%;
   background-image: url(../img/planet-3.png); }
@@ -610,11 +688,10 @@ img#ship {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: all 2s ease;
+  transition: all 2s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  overflow: hidden;
   top: 10%;
   left: 80%;
   background-image: url(../img/planet-4.png); }
@@ -627,17 +704,36 @@ img#ship {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  transition: all 2s ease;
+  transition: all 2s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  overflow: hidden;
   top: 60%;
   left: 47%;
   background-image: url(../img/planet-5.png); }
 
+.new-planets {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 10%;
+  left: 10%; }
+
+.planet-6 {
+  width: 16px;
+  height: 16px;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url(../img/planet-6.png); }
+
 .transform-active {
-  transition: all 2s ease;
+  transition: all 5s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   width: 200px;
   height: 200px;
   top: 25%;
@@ -688,6 +784,15 @@ img#ship {
   border-radius: 50%;
   color: lime; }
 
+.explore-6 {
+  z-index: 10;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  border: solid transparent 2px;
+  border-radius: 50%;
+  color: lime; }
+
 .explore-show {
   visibility: visible;
   transition-delay: 1s !important;
@@ -717,6 +822,11 @@ img#ship {
   margin: 0; }
 
 .explore-text-5 {
+  font-size: 1px;
+  color: lime;
+  margin: 0; }
+
+.explore-text-6 {
   font-size: 1px;
   color: lime;
   margin: 0; }
@@ -962,6 +1072,57 @@ img#ship {
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+@keyframes meters {
+  10% {
+    height: 20%; }
+  20% {
+    height: 19%; }
+  30% {
+    height: 25%; }
+  40% {
+    height: 35%; }
+  45% {
+    height: 40%; }
+  55% {
+    height: 39%; }
+  65% {
+    height: 55%; }
+  73% {
+    height: 80%; }
+  74% {
+    background-color: green; }
+  75% {
+    height: 85%;
+    background-color: red; }
+  77% {
+    height: 80%;
+    background-color: green; }
+  79% {
+    height: 75%; }
+  80% {
+    height: 55%; }
+  85% {
+    height: 40%; }
+  100% {
+    height: 30%; } }
+@keyframes hide-hyper-space {
+  10% {
+    background-color: white; }
+  25% {
+    background-color: #d9230f; }
+  35% {
+    background-color: white;
+    height: 95%; }
+  45% {
+    background-color: red;
+    height: 100%; }
+  60% {
+    background-color: white;
+    height: 95%; }
+  75% {
+    background-color: #d9230f; }
+  90% {
+    background-color: white; } }
 @keyframes blueBlink {
   0% {
     background: #2af5ff; }

@@ -1,0 +1,27 @@
+.sliders > div {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+}
+
+.transparent {
+  background-color: #d9230f!important;
+  animation: hide-hyper-space 1s linear infinite!important;
+  height: 90%!important;
+}
+
+
+.meter {
+  height: 40%;
+  width: 100%;
+  background-color: green;
+}
+.meter1 {
+  animation: meters 35s linear infinite;
+}
+.meter2 {
+  animation: meters 60s linear infinite;
+}
+.meter3 {
+  animation: meters 120s ease infinite;
+}

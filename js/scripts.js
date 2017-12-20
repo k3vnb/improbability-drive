@@ -152,5 +152,46 @@ $(document).ready(function(){
       $('.planet-5').removeClass('on-top');
     }, 2000);
   })
-
 });
+
+//harlem globetrotter gif
+$(document).ready(function() {
+  $('.planet-6').click(function(){
+    $('#broadcast').addClass('planet-6-gif').delay(10000).queue(function(next){
+      $('#broadcast').removeClass('planet-6-gif');
+      next();
+    })
+  })
+})
+//end globetrotter gif
+
+$(document).ready(function(e) {
+    $('.planets > div').click(function(e) {
+
+      var xPercent = e.pageX / $(window).width();
+      var yPercent = e.pageY / $(window).height();
+      // var xPosition = Math.floor(xPercent*100);
+      // var yPosition = Math.floor(yPercent*100);
+      var xPosition = Math.floor(xPercent*100);
+      var yPosition = Math.floor(yPercent*100);
+      console.log(xPosition);
+      console.log(yPosition);
+      $('#warp').css({perspectiveOrigin: xPosition + "vw " + yPosition + "vh"});
+      $('#warp').addClass("center-warp").delay(5000).queue(function(next){
+        $('#warp').removeClass("center-warp");
+        next();
+
+
+      });
+
+    });
+  });
+  $(document).ready(function() {
+    $('.planets > div').click(function() {
+      $('.meter').addClass("transparent").delay(4000).queue(function(next) {
+        $('.meter').removeClass("transparent");
+        next();
+      });
+    });
+
+  });
