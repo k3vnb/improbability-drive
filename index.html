@@ -9,63 +9,68 @@
     <title></title>
   </head>
   <body>
+    <div class="wiper-1 wiper">
+    </div>
+    <div class="wiper-2 wiper">
+    </div>
     <div class="planets">
 
       <div class="planet-1 planet">
-        <img class="alien-1" src="img/alien-1.gif" alt="alien">
-        <div class="return-to-orbit-1">
+        <img class="alien alien-1" src="img/alien-1.gif" alt="alien">
+        <div class="return-to-orbit-1 return">
           <p>Return to Orbit</p>
         </div>
+        <p class="explore-text-1">Turok</p>
         <div class="explore-1 explore">
-          <p>Explore</p>
         </div>
       </div>
 
       <div class="planet-2 planet">
-        <img class="alien-2" src="img/alien-1.gif" alt="alien">
-        <div class="return-to-orbit-2">
+        <img class="alien alien-2" src="img/alien-2.gif" alt="alien">
+        <div class="return-to-orbit-2 return">
           <p>Return to Orbit</p>
         </div>
+        <p class="explore-text-2">Turok</p>
         <div class="explore-2 explore">
-          <p>Explore</p>
         </div>
       </div>
 
       <div class="planet-3 planet">
-        <img class="alien-3" src="img/alien-1.gif" alt="alien">
-        <div class="return-to-orbit-3">
+        <img class="alien alien-3" src="img/alien-3.gif" alt="alien">
+        <div class="return-to-orbit-3 return">
           <p>Return to Orbit</p>
         </div>
+        <p class="explore-text-3">Turok</p>
         <div class="explore-3 explore">
-          <p>Explore</p>
         </div>
       </div>
 
       <div class="planet-4 planet">
-        <img class="alien-4" src="img/alien-1.gif" alt="alien">
-        <div class="return-to-orbit-4">
+        <img class="alien alien-4" src="img/alien-4.gif" alt="alien">
+        <div class="return-to-orbit-4 return">
           <p>Return to Orbit</p>
         </div>
+        <p class="explore-text-4">Kamino</p>
         <div class="explore-4 explore">
-          <p>Explore</p>
         </div>
       </div>
 
       <div class="planet-5 planet">
-        <img class="alien-5" src="img/alien-1.gif" alt="alien">
-        <div class="return-to-orbit-5">
+        <img class="alien alien-5" src="img/alien-5.gif" alt="alien">
+        <div class="return-to-orbit-5 return">
           <p>Return to Orbit</p>
         </div>
+        <p class="explore-text-5">Geonosis</p>
         <div class="explore-5 explore">
-          <p>Explore</p>
         </div>
       </div>
 
     </div>
+
     <div class="ctrl-pnl grid-6">
       <div class="pnl pannel-left grid-2">
         <div class="btn-grid-raised grid-6">
-          <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div> <div><span class="button"></span></div>
+          <div><span class="button" data-color="lime"></span></div> <div><span class="button" data-color="yellow"></span></div> <div><span class="button" data-color="red"></span></div> <div><span class="button" data-color="orange"></span></div> <div><span class="button" data-color="blue"></span></div> <div><span class="button" data-color="white"></span></div> <div><span class="button" data-color="green"></span></div> <div><span class="button" data-color="lightyellow"></span></div> <div><span class="button" data-color="pink"></span></div> <div><span class="button" data-color="darkorange"></span></div> <div><span class="button" data-color="lightblue"></span></div> <div><span class="button" data-color="lightgrey"></span></div> <div><span class="button" data-color="turquoise"></span></div> <div><span class="button" data-color="salmon"></span></div> <div><span class="button" data-color="purple"></span></div> <div><span class="button" data-color="indigo"></span></div> <div><span class="button" data-color="brown"></span></div> <div><span class="button" data-color="black"></span></div>
         </div>
         <div class="oscilloscope">
 
@@ -139,7 +144,7 @@
           <div></div> <div></div> <div></div>
         </div>
         <div class="flat-btns grid-1">
-          <div></div> <div></div>
+          <div class="wiper-switch"><input type="checkbox" id="switch" /><label for="switch">Toggle</label></div> <div></div>
         </div>
         <div class="round-btns grid-2">
             <div></div> <div></div>
@@ -148,7 +153,8 @@
           <div></div> <div></div> <div></div>
         </div>
         <div class="oscilloscope-2">
-
+          <img id="ship" src="img/ships.png" alt="ship">
+          <img id="health" src="img/hull-integrity.png" alt="health">
         </div>
       </div>
       <div class="pnl pannel-center-right grid-4
@@ -197,7 +203,7 @@
       </div>
       <div class="pnl pannel-right grid-3">
         <div class="oscilloscope">
-
+          <img src="img/oscilloscope.gif" alt="">
         </div>
         <div class="radar-2 round">
           <div class="square">
@@ -260,10 +266,10 @@
           <div></div> <div></div> <div></div><div></div>
         </div>
         <div class="oscilloscope round">
-
+            <img src="img/Oscilloscopeslow.gif" alt="">
         </div>
         <div class="oscilloscope round">
-
+            <img src="img/oscilloscoperev.gif" alt="">
         </div>
       </div>
     </div>
