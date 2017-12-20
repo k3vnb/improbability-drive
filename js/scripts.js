@@ -143,6 +143,7 @@ $(document).ready(function(){
 
 $(document).ready(function(e) {
     $('.planets > div').click(function(e) {
+
       var xPercent = e.pageX / $(window).width();
       var yPercent = e.pageY / $(window).height();
       // var xPosition = Math.floor(xPercent*100);
@@ -155,7 +156,21 @@ $(document).ready(function(e) {
       $('#warp').addClass("center-warp").delay(5000).queue(function(next){
         $('#warp').removeClass("center-warp");
         next();
+
+
       });
 
     });
   });
+  $(document).ready(function() {
+    $('.planets > div').click(function() {
+      $('.meter').addClass("transparent");
+      $('.sliders > div').addClass("red").delay(2000).queue(function(next) {
+        $('.sliders > div').removeClass("red");
+        next();
+        $('.meter').removeClass("transparent");
+      });
+
+    });
+
+  })

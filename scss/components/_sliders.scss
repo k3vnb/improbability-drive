@@ -1,0 +1,96 @@
+.sliders > div {
+  background-color: white;
+  display: flex;
+  align-items: flex-end;
+}
+.red {
+  background-color: red!important;
+  height: 90%!important;
+}
+.transparent {
+  background-color: #e8151591!important;
+  animation: hide-hyper-space .5s linear!important;
+  // height: 90%!important;
+}
+
+
+.meter {
+  height: 40%;
+  width: 100%;
+  background-color: green;
+}
+.meter1 {
+  animation: meters 35s linear infinite;
+}
+.meter2 {
+  animation: meters 60s linear infinite;
+}
+.meter3 {
+  animation: meters 120s ease infinite;
+}
+@keyframes meters {
+  0% {
+
+  }
+  10% {
+    height: 20%;
+  }
+  20% {
+    height: 19%;
+  }
+  30% {
+    height: 25%;
+  }
+  40% {
+    height: 35%;
+  }
+  45% {
+    height: 40%;
+  }
+  55% {
+    height: 39%;
+  }
+  65% {
+    height: 55%;
+  }
+  73% {
+    height: 80%;
+  }
+  74% {
+    background-color: green;
+  }
+  75% {
+    height: 85%;
+    background-color: red;
+  }
+  77% {
+    height: 80%;
+    background-color: green;
+  }
+  79% {
+    height: 75%;
+  }
+  80% {
+    height: 55%;
+  }
+  85% {
+    height: 40%;
+  }
+  100% {
+    height: 30%;
+  }
+}
+// @keyframes hide-hyper-space {
+//   0% {
+//     display: none;
+//   }
+//   20% {
+//     display: block;
+//   }
+//   60% {
+//     display: none;
+//   }
+//   80% {
+//     display: block;
+//   }
+// }
