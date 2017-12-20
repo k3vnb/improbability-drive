@@ -40,10 +40,9 @@
     @each $key, $value in $blinkColors{
         &.dial-#{$key}{
             @for $i from 1 through 3 {
-                $duration: random(10) / 10 + $key;
-                $delay: ($i - 1) * .44;
+                $delay: ($i - 1) * ($key / 3 / 3);
                 .led-#{$i}{
-                    animation: $value #{$duration}s #{$delay}s infinite ;
+                    animation: $value #{$key}s #{$delay}s infinite ;
                 }
             }
         }
