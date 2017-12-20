@@ -6,3 +6,24 @@
     transform: rotate(360deg);
   }
 }
+
+@keyframes blueBlink {
+    0%{
+        background: #2af5ff;
+    }
+    30% {
+        background: black;
+    }
+    33% {
+        background: blue;
+    }
+    63%{
+        background: black;
+    }
+    66%{
+        background: #3eff3e;
+    }
+    97%{
+        background: black;
+    }
+}
