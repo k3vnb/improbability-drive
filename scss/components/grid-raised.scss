@@ -6,3 +6,61 @@
   border-radius: 50%;
   box-shadow: -4px 2px 2px black;
 }
+.button:active {
+  width: 90%;
+  height: 45%;
+}
+.btn-grid-raised > div:nth-child(1) .button {
+  box-shadow: -3px 5px 0 lime;
+}
+.btn-grid-raised > div:nth-child(2) .button {
+  box-shadow: -3px 5px 0 yellow;
+}
+.btn-grid-raised > div:nth-child(3) .button {
+  box-shadow: -3px 5px 0 red;
+}
+.btn-grid-raised > div:nth-child(4) .button {
+  box-shadow: -3px 5px 0 orange;
+}
+.btn-grid-raised > div:nth-child(5) .button {
+  box-shadow: -3px 5px 0 blue;
+}
+.btn-grid-raised > div:nth-child(6) .button {
+  box-shadow: -3px 5px 0 white;
+}
+.btn-grid-raised > div:nth-child(7) .button {
+  box-shadow: -3px 5px 0 green;
+}
+.btn-grid-raised > div:nth-child(8) .button {
+  box-shadow: -3px 5px 0 lightyellow;
+}
+.btn-grid-raised > div:nth-child(9) .button {
+  box-shadow: -3px 5px 0 pink;
+}
+.btn-grid-raised > div:nth-child(10) .button {
+  box-shadow: -3px 5px 0 darkorange;
+}
+.btn-grid-raised > div:nth-child(11) .button {
+  box-shadow: -3px 5px 0 lightblue;
+}
+.btn-grid-raised > div:nth-child(12) .button {
+  box-shadow: -3px 5px 0 lightgrey;
+}
+.btn-grid-raised > div:nth-child(13) .button {
+  box-shadow: -3px 5px 0 turquoise;
+}
+.btn-grid-raised > div:nth-child(14) .button {
+  box-shadow: -3px 5px 0 salmon;
+}
+.btn-grid-raised > div:nth-child(15) .button {
+  box-shadow: -3px 5px 0 purple;
+}
+.btn-grid-raised > div:nth-child(16) .button {
+  box-shadow: -3px 5px 0 indigo;
+}
+.btn-grid-raised > div:nth-child(17) .button {
+  box-shadow: -3px 5px 0 brown;
+}
+.btn-grid-raised > div:nth-child(18) .button {
+  box-shadow: -3px 5px 0 black;
+}
