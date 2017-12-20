@@ -3,7 +3,11 @@ $gold2: #b5a47e;
 $gold-light: #e2cd97;
 $flat-button-brown: #8f5240;
 $flat-button-brown-shadow: #240000;
-
+$bg: #2f2f2f;
+$bg1: #111;
+$btn: #E06641;
+$btn-off: darken($btn,47%);
+$btn-on: saturate($btn,30%);
 
 @for $i from 1 through 4 {
   // $x: $i*20;

@@ -160,6 +160,10 @@ $(document).ready(function(){
       $('.planet-5').removeClass('on-top');
     }, 2000);
   })
+  $(".btn-grid-flat div").click(function() {
+    $(this).addClass('active');
+    $(".btn-grid-flat div").not(this).removeClass('active');
+  });
 });
 
 //harlem globetrotter gif
