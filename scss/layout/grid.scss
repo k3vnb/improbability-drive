@@ -61,9 +61,53 @@
 .pnl {
     padding: 10px;
     grid-gap: 10px;
-    background: linear-gradient(-45deg, #3b5a76, #aabdcc);
+    background: linear-gradient(-45deg, #000000, #2d475a);
+    position: relative;
+    top: -85px;
+    box-shadow: 0 0 0 53px red;
     > div {
         grid-gap: 5px;
         padding: 5px;
     }
+}
+
+.pannel-center-left {
+    z-index: -1;
+}
+
+.pannel-left, .pannel-right {
+    z-index: 1;
+}
+
+.pannel-left {
+    box-shadow: 0 0 17px -1px #0bf9f9, 0 0 100px white, -35px 0 8px 52px black, -52px -11px 0 42px #fff;
+}
+
+.pannel-left-corner {
+    box-shadow: 0 0 17px -1px #0bf9f9, 0 0 100px white, -36px -9px 8px 44px black, -40px -9px 0 45px #fff;
+}
+
+.pannel-center-left {
+    box-shadow: 0 0 17px -1px #0bf9f9, 0 0 100px white, -4px 0 8px 53px black, -4px 0 0 55px #fff;
+}
+
+.pannel-center-right {
+    box-shadow: 0 0 17px -1px #0bf9f9, 0 0 100px white, 50px 0 8px 53px black, 55px 0 0 55px #fff;
+}
+
+.pannel-right-corner {
+    box-shadow: 0 0 17px -1px #0bf9f9, 0 0 100px white, 36px -9px 8px 44px black, 40px -9px 0 45px #fff;
+}
+.pannel-right {
+    box-shadow: 0 0 17px -1px #0bf9f9, 0 0 100px white, 35px 0 8px 52px black, 52px -11px 0 42px #fff;
+}
+
+.pnl-back {
+    height: 50vh;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background: #000;
+    z-index: 1;
+    box-shadow: inset 0px 10px 3px -5px #fff;
 }

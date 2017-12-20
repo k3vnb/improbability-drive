@@ -1,5 +1,62 @@
-.dials div {
-  border-radius: 50%;
-  background-color: #eae8d8;
-
+.dial {
+    border-radius: 50%;
+    background-color: #525252;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: inset -45px -45px 100px #00000087, 0px 1px 4px 2px black;
+    border: 1px solid #484848;
+    span {
+        position: absolute;
+        top: 0px;
+        right: 4px;
+        bottom: 0;
+        left: calc(54% + 12px);
+        height: 6px;
+        background: #000;
+        margin: auto;
+        border-radius: 50%;
+        transform-origin: -17px;
+    }
+    .led-1{
+        background-color: #2af5ff;
+        box-shadow:inset 0 0 5px #fff, 0 1px 2px #2af5ff, 0 0px 11px 4px #00000059;
+    }
+    .led-2{
+        background-color: blue;
+        box-shadow: inset 0 0 5px #fff, 0 0 5px blue, 0 0px 11px 4px #00000059;
+    }
+    .led-3{
+        background-color: #3eff3e;
+        box-shadow: inset 0 0 5px #fff, 0 0 5px #3eff3e, 0 0px 11px 4px #00000059;
+    }
+    $blinkColors: (
+        1 : blueBlink,
+        2 : orangeBlink,
+        3 : purpleBlink,
+        4 : greenBlink
+    );
+    @each $key, $value in $blinkColors{
+        &.dial-#{$key}{
+            @for $i from 1 through 3 {
+                $duration: random(10) / 10 + $key;
+                $delay: ($i - 1) * .44;
+                .led-#{$i}{
+                    animation: $value #{$duration}s #{$delay}s infinite ;
+                }
+            }
+        }
+    }
+}
+.grid-item {
+    width: 44%;
+margin: auto;
+box-shadow: none;
+}
+@for $i from 1 through 6 {
+    $x: $i * 60;
+    .dial span:nth-of-type(#{$i}) {
+        transform:rotate($i * 60deg);
+    }
 }
