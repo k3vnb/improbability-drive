@@ -164,6 +164,24 @@ $(document).ready(function() {
   })
 })
 //end globetrotter gif
+//disco gif
+$(document).ready(function() {
+  $('.planet-7').click(function(){
+    $('#broadcast').addClass('planet-7-gif').delay(10000).queue(function(next){
+      $('#broadcast').removeClass('planet-7-gif');
+      next();
+    })
+  })
+})
+//end disco gif
+$(document).ready(function() {
+  $('.planet-7').click(function(){
+    $('#discoworld').addClass('discoworlds').delay(10000).queue(function(next){
+      $('#discoworld').removeClass('discoworlds');
+      next();
+    })
+  })
+})
 //start of doom gif
 $(document).ready(function() {
   $('.btn-lg').click(function(){

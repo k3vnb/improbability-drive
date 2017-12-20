@@ -173,3 +173,35 @@
         background: black;
     }
 }
+@keyframes btns-column-destruct {
+  0% {
+    background: #ff0808;
+    box-shadow: 0px 2px 5px #ff08be8c;
+  }
+  30% {
+    background: #ff080800;
+    box-shadow: 0px 2px 10px #ff08be8c;
+  }
+  60% {
+    background: #ff0808;
+    box-shadow: 0px 2px 10px #ff08be8c;
+  }
+  90% {
+    background: #ff080800;
+    box-shadow: 0px 2px 5px #ff08be8c;
+  }
+}
+@keyframes disco-drop {
+  0% {
+    top: -1000px;
+  }
+  20% {
+    top: 0%;
+  }
+  60% {
+    top: 0%
+  }
+  0% {
+    top: -1000px;
+  }
+}

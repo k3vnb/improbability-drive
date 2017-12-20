@@ -26,3 +26,7 @@
   background-size: cover;
   z-index: 20;
 }
+.planet-7-gif {
+  @extend .planet-6-gif;
+  background-image: url(../img/soultrain.gif);
+}

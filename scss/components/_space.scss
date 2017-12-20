@@ -83,33 +83,54 @@
   left: 47%;
   background-image: url(../img/planet-5.png);
 }
-.new-planets {
-  @extend .planets;
-  height: 20px;
-  width: 20px;
-  position: absolute;
-  top: 10%;
-  left: 10%;
-  transition: all 1s ease;
-  transform: scale();
-  &:hover {
-    transform: scale(3, 3);
-  }
-}
 .planet-6 {
-  width: 90%;
-  height: 90%;
-  z-index: 99;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  @include planet;
+  top: 10%;
+  left: 97%;
   background-image: url(../img/planet-6.png);
-
 }
+.planet-7 {
+  @include planet;
+  top: 15%;
+  left: 87%;
+  background-image: url(../img/discoball.png);
+}
+// .new-planets {
+//   @extend .planets;
+//   height: 20px;
+//   width: 20px;
+//   position: absolute;
+//   top: 10%;
+//   left: 90%;
+//   transition: all 1s ease;
+//   transform: scale();
+//   &:hover {
+//     transform: scale(4, 4);
+//   }
+// }
+// .planet-6 {
+//   width: 90%;
+//   height: 90%;
+//   z-index: 99;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: 50% 50%;
+//   background-image: url(../img/planet-6.png);
+// }
+// .new-planets2 {
+//   @extend .new-planets;
+//   top: 20%;
+//   left: 94%
+// }
+
+// .planet-7 {
+//   @extend .planet-6;
+//   background-image: url(../img/discoball.png);
+// }
 
 
 .transform-active {
@@ -137,6 +158,10 @@
 .explore-6 {
   @include explore;
 }
+.explore-7 {
+  @include explore;
+}
+
 .explore-show {
   visibility: visible;
   transition-delay: 1s !important;
@@ -161,6 +186,9 @@
   @include explore-text;
 }
 .explore-text-6 {
+  @include explore-text;
+}
+.explore-text-7 {
   @include explore-text;
 }
 .explore-text-show {
@@ -192,6 +220,16 @@
   @include explore-planet;
 }
 .explore-planet-5 {
+  margin-top: -15100px;
+  margin-left: -14900px;
+  @include explore-planet;
+}
+.explore-planet-6 {
+  margin-top: -15100px;
+  margin-left: -14900px;
+  @include explore-planet;
+}
+.explore-planet-7 {
   margin-top: -15100px;
   margin-left: -14900px;
   @include explore-planet;
