@@ -1,0 +1,40 @@
+.self-destruct {
+  background-color: red;
+  border-radius: 50%;
+  margin: 10%;
+}
+
+.self-destruct-animation {
+  animation: shake-x .7s infinite, shake-y .6s infinite;
+}
+
+@keyframes shake-x {
+  10%, 90% {
+    left: -10px;
+  }
+  20%, 80% {
+    left: 20px;
+  }
+  30%, 50%, 70%  {
+    left: -40px;
+  }
+  40%, 60% {
+    left: 40px;
+  }
+
+}
+@keyframes shake-y {
+  10%, 90% {
+    bottom: 0px;
+  }
+  20%, 80% {
+    bottom: 30px;
+  }
+  30%, 50%, 70%  {
+    bottom: -30px;
+  }
+  40%, 60% {
+    bottom: 50px;
+  }
+
+}

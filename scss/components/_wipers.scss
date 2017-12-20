@@ -3,12 +3,29 @@
   width: 35%;
   height: 20px;
   background-color: grey;
-  // z-index: 999;
 }
 .wipe-animation {
-  animation: wipe 2s  infinite;
+  animation: wipe 2s infinite;
   transform-origin: left;
-  z-index: 90;
+}
+
+.wiper-1 {
+  @include wiper;
+  top: 20%;
+  left: 55%;
+}
+.wiper-2 {
+  @include wiper;
+  top: 20%;
+  left: 25%;
+}
+@keyframes wipe {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(-100deg);
+  }
 }
 .wiper-switch {
   display: flex;
@@ -54,23 +71,5 @@
 
   label:active:after {
   	width: 30px;
-  }
-}
-.wiper-1 {
-  @include wiper;
-  top: 50%;
-  left: 55%;
-}
-.wiper-2 {
-  @include wiper;
-  top: 50%;
-  left: 25%;
-}
-@keyframes wipe {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(-100deg);
   }
 }

@@ -1,4 +1,8 @@
 $(document).ready(function(){
+  $(".self-destruct").click(function() {
+    $('.ctrl-pnl').toggleClass('self-destruct-animation');
+  });
+
   $(".wiper-switch input").click(function() {
     $('.wiper').toggleClass('wipe-animation');
   });
