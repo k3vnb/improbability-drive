@@ -90,11 +90,15 @@
   position: absolute;
   top: 10%;
   left: 10%;
+  transition: all 1s ease;
+  transform: scale();
+  &:hover {
+    transform: scale(3, 3);
+  }
 }
 .planet-6 {
-  // @include planet;
-  width: 16px;
-  height: 16px;
+  width: 90%;
+  height: 90%;
   z-index: 99;
   display: flex;
   justify-content: center;
@@ -104,6 +108,7 @@
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-image: url(../img/planet-6.png);
+
 }
 
 

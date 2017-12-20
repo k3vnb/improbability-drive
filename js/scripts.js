@@ -164,7 +164,17 @@ $(document).ready(function() {
   })
 })
 //end globetrotter gif
-
+//start of doom gif
+$(document).ready(function() {
+  $('.btn-lg').click(function(){
+    $('#broadcast').addClass('dooms-gif').delay(3800).queue(function(next){
+      $('#broadcast').removeClass('dooms-gif');
+      next();
+    })
+  })
+})
+//end of doom gif
+//planet zoom locator
 $(document).ready(function(e) {
     $('.planets > div').click(function(e) {
 
@@ -180,18 +190,17 @@ $(document).ready(function(e) {
       $('#warp').addClass("center-warp").delay(5000).queue(function(next){
         $('#warp').removeClass("center-warp");
         next();
-
-
       });
-
     });
   });
+  //end of planet zoom locator
+  //sliders go red
   $(document).ready(function() {
     $('.planets > div').click(function() {
-      $('.meter').addClass("transparent").delay(4000).queue(function(next) {
-        $('.meter').removeClass("transparent");
+      $('.meter').addClass("red-sliders").delay(4000).queue(function(next) {
+        $('.meter').removeClass("red-sliders");
         next();
       });
     });
-
   });
+//end of sliders going red
