@@ -273,7 +273,7 @@ body {
   grid-column-start: 2; }
 
 .pannel-right.grid-3 {
-  grid-template-rows: 4fr 1fr 3fr; }
+  grid-template-rows: 3fr 1fr; }
 
 .knobs.grid-4 {
   grid-column: span 2; }
@@ -451,7 +451,6 @@ div {
   background-color: transparent; }
 
 .pannel-right .btn-grid-flat {
-  grid-row: span 2;
   background-color: transparent; }
 
 .button {
@@ -600,7 +599,24 @@ div {
 
 .self-destruct-animation {
   animation: shake-x .7s infinite, shake-y .6s infinite; }
+  .self-destruct-animation #broadcast {
+    background: red !important; }
+    .self-destruct-animation #broadcast:after {
+      content: "";
+      font-size: 310px;
+      animation: countDown 6s linear; }
 
+@keyframes countDown {
+  0% {
+    content: "5"; }
+  20% {
+    content: "4"; }
+  40% {
+    content: "3"; }
+  60% {
+    content: "2"; }
+  80% {
+    content: "1"; } }
 @keyframes shake-x {
   10%, 90% {
     left: -10px; }
@@ -669,6 +685,20 @@ img#ship {
   animation: meters 120s ease infinite; }
 
 /*space*/
+.explore {
+  z-index: 10;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  border: solid transparent 2px;
+  border-radius: 50%;
+  color: lime; }
+
+.explore-text {
+  font-size: 1px;
+  color: lime;
+  margin: 0; }
+
 .planets, .new-planets {
   height: 50vh;
   width: 100vw;
@@ -783,60 +813,9 @@ img#ship {
   height: 200px;
   top: 25%;
   left: 45%; }
-
-.explore-1 {
-  z-index: 10;
-  visibility: hidden;
-  width: 1px;
-  height: 1px;
-  border: solid transparent 2px;
-  border-radius: 50%;
-  color: lime; }
-
-.explore-2 {
-  z-index: 10;
-  visibility: hidden;
-  width: 1px;
-  height: 1px;
-  border: solid transparent 2px;
-  border-radius: 50%;
-  color: lime; }
-
-.explore-3 {
-  z-index: 10;
-  visibility: hidden;
-  width: 1px;
-  height: 1px;
-  border: solid transparent 2px;
-  border-radius: 50%;
-  color: lime; }
-
-.explore-4 {
-  z-index: 10;
-  visibility: hidden;
-  width: 1px;
-  height: 1px;
-  border: solid transparent 2px;
-  border-radius: 50%;
-  color: lime; }
-
-.explore-5 {
-  z-index: 10;
-  visibility: hidden;
-  width: 1px;
-  height: 1px;
-  border: solid transparent 2px;
-  border-radius: 50%;
-  color: lime; }
-
-.explore-6 {
-  z-index: 10;
-  visibility: hidden;
-  width: 1px;
-  height: 1px;
-  border: solid transparent 2px;
-  border-radius: 50%;
-  color: lime; }
+  .transform-active .explore-text {
+    transition: all 2s ease-in;
+    font-size: 50px; }
 
 .explore-show {
   visibility: visible;
@@ -846,99 +825,26 @@ img#ship {
   width: 20px;
   height: 20px; }
 
-.explore-text-1 {
-  font-size: 1px;
-  color: lime;
-  margin: 0; }
-
-.explore-text-2 {
-  font-size: 1px;
-  color: lime;
-  margin: 0; }
-
-.explore-text-3 {
-  font-size: 1px;
-  color: lime;
-  margin: 0; }
-
-.explore-text-4 {
-  font-size: 1px;
-  color: lime;
-  margin: 0; }
-
-.explore-text-5 {
-  font-size: 1px;
-  color: lime;
-  margin: 0; }
-
-.explore-text-6 {
-  font-size: 1px;
-  color: lime;
-  margin: 0; }
-
-.explore-text-show {
-  transition: all 2s ease-in;
-  font-size: 50px; }
-
 .explore:hover {
   cursor: pointer; }
 
-.explore-planet-1 {
-  margin-top: -14900px;
-  margin-left: -14900px;
-  transition: all 3s ease;
-  width: 30000px;
-  height: 30000px;
-  z-index: 10; }
-
-.explore-planet-2 {
+.explore-planet {
   margin-top: -15100px;
   margin-left: -14900px;
   transition: all 3s ease;
   width: 30000px;
   height: 30000px;
   z-index: 10; }
-
-.explore-planet-3 {
-  margin-top: -15100px;
-  margin-left: -14600px;
-  transition: all 3s ease;
-  width: 30000px;
-  height: 30000px;
-  z-index: 10; }
-
-.explore-planet-4 {
-  margin-top: -14800px;
-  margin-left: -15400px;
-  transition: all 3s ease;
-  width: 30000px;
-  height: 30000px;
-  z-index: 10; }
-
-.explore-planet-5 {
-  margin-top: -15100px;
-  margin-left: -14900px;
-  transition: all 3s ease;
-  width: 30000px;
-  height: 30000px;
-  z-index: 10; }
+  .explore-planet .return {
+    visibility: visible;
+    width: 400px;
+    height: 100px;
+    font-size: 50px;
+    transition-delay: 1s !important;
+    transition: all 1s ease-in; }
 
 .alien {
-  height: 0; }
-
-.alien-1 {
-  width: 1px; }
-
-.alien-2 {
-  width: 1px; }
-
-.alien-3 {
-  width: 1px; }
-
-.alien-4 {
-  width: 1px; }
-
-.alien-5 {
+  height: 0;
   width: 1px; }
 
 .alien-grow {
@@ -1005,14 +911,6 @@ img#ship {
   justify-content: center;
   align-items: center; }
 
-.return-to-orbit-show {
-  visibility: visible;
-  width: 400px;
-  height: 100px;
-  font-size: 50px;
-  transition-delay: 1s !important;
-  transition: all 1s ease-in; }
-
 .on-top {
   z-index: 100; }
 
@@ -1050,7 +948,8 @@ img#ship {
   padding: 15px; }
 
 .pannel-right .btn-grid-flat div {
-  background: #d24141; }
+  background: #d24141;
+  height: 28px; }
 
 .wipe-animation {
   animation: wipe 2s infinite;
