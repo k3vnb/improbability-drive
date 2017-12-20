@@ -1,8 +1,9 @@
 @mixin wiper {
   position: absolute;
-  width: 35%;
+  width: 800px;
   height: 20px;
   background-color: grey;
+  z-index: -100;
 }
 .wipe-animation {
   animation: wipe 2s infinite;

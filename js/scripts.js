@@ -14,13 +14,7 @@ $(document).ready(function(){
     $("span.button").mousedown()
   });
 
-  // $("div.tv-button").click(function() {
-  //   var channel = $(this).attr("data-tv");
-  //   $('#broadcast').css('background-image' channel).delay(10000).queue(function(next){
-  //     $('#broadcast').removeClass('planet-6-gif');
-  //     next();
-  //   })
-  // })
+
 
   $(".planet-1").click(function() {
     $('.planet-1').toggleClass('transform-active');
@@ -160,10 +154,124 @@ $(document).ready(function(){
       $('.planet-5').removeClass('on-top');
     }, 2000);
   })
+  $("span.button").click(function() {
+    var color = $(this).attr("data-color");
+    $(".planet p").css("color", color);
+    $(".explore, .return").css("border-color", color);
+    $("span.button").mousedown()
+  });
   $(".btn-grid-flat div").click(function() {
     $(this).addClass('active');
-    $(".btn-grid-flat div").not(this).removeClass('active');
+    $(this).parent().children().not(this).removeClass('active');
   });
+    $(".ch-1").click(function() {
+      $('#broadcast').addClass('channel-1').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-1');
+        next();
+      });
+    });
+    $(".ch-2").click(function() {
+      $('#broadcast').addClass('channel-2').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-2');
+        next();
+      });
+    });
+    $(".ch-3").click(function() {
+      $('#broadcast').addClass('channel-3').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-3');
+        next();
+      });
+    });
+    $(".ch-4").click(function() {
+      $('#broadcast').addClass('channel-4').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-4');
+        next();
+      });
+    });
+    $(".ch-5").click(function() {
+      $('#broadcast').addClass('channel-5').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-5');
+        next();
+      });
+    });
+    $(".ch-6").click(function() {
+      $('#broadcast').addClass('channel-6').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-6');
+        next();
+      });
+    });
+    $(".ch-7").click(function() {
+      $('#broadcast').addClass('channel-7').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-7');
+        next();
+      });
+    });
+    $(".ch-8").click(function() {
+      $('#broadcast').addClass('channel-8').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-8');
+        next();
+      });
+    });
+    $(".ch-9").click(function() {
+      $('#broadcast').addClass('channel-9').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-9');
+        next();
+      });
+    });
+    $(".ch-10").click(function() {
+      $('#broadcast').addClass('channel-10').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-10');
+        next();
+      });
+    });
+    $(".ch-11").click(function() {
+      $('#broadcast').addClass('channel-11').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-11');
+        next();
+      });
+    });
+    $(".ch-12").click(function() {
+      $('#broadcast').addClass('channel-12').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-12');
+        next();
+      });
+    });
+    $(".ch-13").click(function() {
+      $('#broadcast').addClass('channel-13').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-13');
+        next();
+      });
+    });
+    $(".ch-14").click(function() {
+      $('#broadcast').addClass('channel-14').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-14');
+        next();
+      });
+    });
+    $(".ch-15").click(function() {
+      $('#broadcast').addClass('channel-15').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-15');
+        next();
+      });
+    });
+    $(".ch-16").click(function() {
+      $('#broadcast').addClass('channel-16').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-16');
+        next();
+      });
+    });
+    $(".ch-17").click(function() {
+      $('#broadcast').addClass('channel-17').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-17');
+        next();
+      });
+    });
+    $(".ch-18").click(function() {
+      $('#broadcast').addClass('channel-18').delay(5000).queue(function(next){
+        $('#broadcast').removeClass('channel-18');
+        next();
+      });
+    });
 });
 
 //harlem globetrotter gif

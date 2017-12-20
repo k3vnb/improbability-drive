@@ -107,6 +107,114 @@ html body {
   background-size: cover;
   z-index: 20; }
 
+.channel-1 {
+  background-image: url(../img/channel-1.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-2 {
+  background-image: url(../img/channel-2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-3 {
+  background-image: url(../img/channel-3.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-4 {
+  background-image: url(../img/channel-4.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-5 {
+  background-image: url(../img/channel-5.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-6 {
+  background-image: url(../img/channel-6.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-7 {
+  background-image: url(../img/channel-7.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-8 {
+  background-image: url(../img/channel-8.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-9 {
+  background-image: url(../img/channel-9.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-10 {
+  background-image: url(../img/channel-10.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-11 {
+  background-image: url(../img/channel-11.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-12 {
+  background-image: url(../img/channel-12.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-13 {
+  background-image: url(../img/channel-13.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-14 {
+  background-image: url(../img/channel-2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-15 {
+  background-image: url(../img/channel-1.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-16 {
+  background-image: url(../img/channel-2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-17 {
+  background-image: url(../img/channel-1.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-18 {
+  background-image: url(../img/channel-2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
 .monitors {
   height: 100%;
   width: 100%;
@@ -352,27 +460,27 @@ body {
   .dial.dial-1 .led-1 {
     animation: blueBlink 1.2s 0s infinite; }
   .dial.dial-1 .led-2 {
-    animation: blueBlink 1.6s 0.44s infinite; }
+    animation: blueBlink 1.1s 0.44s infinite; }
   .dial.dial-1 .led-3 {
     animation: blueBlink 1.9s 0.88s infinite; }
   .dial.dial-2 .led-1 {
-    animation: orangeBlink 2.3s 0s infinite; }
+    animation: orangeBlink 2.4s 0s infinite; }
   .dial.dial-2 .led-2 {
-    animation: orangeBlink 3s 0.44s infinite; }
+    animation: orangeBlink 2.6s 0.44s infinite; }
   .dial.dial-2 .led-3 {
-    animation: orangeBlink 2.4s 0.88s infinite; }
+    animation: orangeBlink 2.2s 0.88s infinite; }
   .dial.dial-3 .led-1 {
-    animation: purpleBlink 3.7s 0s infinite; }
+    animation: purpleBlink 3.4s 0s infinite; }
   .dial.dial-3 .led-2 {
     animation: purpleBlink 3.1s 0.44s infinite; }
   .dial.dial-3 .led-3 {
-    animation: purpleBlink 3.9s 0.88s infinite; }
+    animation: purpleBlink 3.6s 0.88s infinite; }
   .dial.dial-4 .led-1 {
     animation: greenBlink 4.8s 0s infinite; }
   .dial.dial-4 .led-2 {
     animation: greenBlink 4.8s 0.44s infinite; }
   .dial.dial-4 .led-3 {
-    animation: greenBlink 4.3s 0.88s infinite; }
+    animation: greenBlink 4.1s 0.88s infinite; }
 
 .grid-item {
   width: 44%;
@@ -1015,17 +1123,19 @@ img#ship {
 
 .wiper-1 {
   position: absolute;
-  width: 35%;
+  width: 800px;
   height: 20px;
   background-color: grey;
+  z-index: -100;
   top: 20%;
   left: 55%; }
 
 .wiper-2 {
   position: absolute;
-  width: 35%;
+  width: 800px;
   height: 20px;
   background-color: grey;
+  z-index: -100;
   top: 20%;
   left: 25%; }
 
@@ -1068,6 +1178,9 @@ img#ship {
     transform: translateX(-100%); }
   .wiper-switch label:active:after {
     width: 30px; }
+
+.active {
+  background-color: red !important; }
 
 @keyframes scan {
   from {
