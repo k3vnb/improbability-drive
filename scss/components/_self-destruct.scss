@@ -6,6 +6,32 @@
 
 .self-destruct-animation {
   animation: shake-x .7s infinite, shake-y .6s infinite;
+  #broadcast {
+      background: red!important;
+      &:after{
+          content:"";
+            font-size: 310px;
+            animation: countDown 6s linear;
+      }
+  }
+}
+
+@keyframes countDown {
+    0%{
+        content:"5";
+    }
+    20%{
+        content:"4" ;
+    }
+    40%{
+        content:"3";
+    }
+    60%{
+        content:"2";
+    }
+    80%{
+        content:"1";
+    }
 }
 
 @keyframes shake-x {
@@ -37,4 +63,19 @@
     bottom: 50px;
   }
 
+}
+
+@keyframes btn-blink {
+    0% {
+        background:black;
+    }
+    49%{
+        background: black;
+    }
+    50%{
+        background:red;
+    }
+    100% {
+        background:red;
+    }
 }

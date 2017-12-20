@@ -34,7 +34,10 @@ img {
     position: absolute;
     bottom: 0;
     z-index: 99;
-
+    max-width: 1915px;
+    margin: auto;
+    left: 0;
+    right: 0;
 }
 
 body {
