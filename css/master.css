@@ -86,6 +86,44 @@ html body {
     opacity: 1; }
   100% {
     opacity: 0; } }
+.tv {
+  height: 100%;
+  width: 100%;
+  border: 2px solid black; }
+
+.tv-show {
+  width: 99%;
+  height: 100%;
+  background-image: url(../img/fuzz.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: background-image .5s ease; }
+
+.planet-6-gif {
+  background-image: url(../img/globetrotter.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.monitors {
+  height: 100%;
+  width: 100%;
+  border: 15px solid #7992a6;
+  background-color: blue; }
+
+#monitor1 {
+  background-image: url(../img/rc.gif);
+  background-position: right; }
+
+#monitor2 {
+  background-image: url(../img/rc2.gif);
+  background-position: center; }
+
+#monitor3 {
+  background-image: url(../img/doom.gif);
+  background-position: center; }
+
 body {
   margin: 0; }
 
@@ -419,7 +457,7 @@ div {
   animation: meters 120s ease infinite; }
 
 /*space*/
-.planets {
+.planets, .new-planets {
   height: 50vh;
   width: 100vw;
   overflow: hidden;
@@ -439,7 +477,6 @@ div {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  overflow: hidden;
   top: 20%;
   left: 30%;
   background-image: url(../img/planet-1.png); }
@@ -456,7 +493,6 @@ div {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  overflow: hidden;
   top: 50%;
   left: 70%;
   background-image: url(../img/planet-2.png); }
@@ -473,7 +509,6 @@ div {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  overflow: hidden;
   top: 60%;
   left: 10%;
   background-image: url(../img/planet-3.png); }
@@ -490,7 +525,6 @@ div {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  overflow: hidden;
   top: 10%;
   left: 80%;
   background-image: url(../img/planet-4.png); }
@@ -507,10 +541,29 @@ div {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  overflow: hidden;
   top: 60%;
   left: 47%;
   background-image: url(../img/planet-5.png); }
+
+.new-planets {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 10%;
+  left: 10%; }
+
+.planet-6 {
+  width: 16px;
+  height: 16px;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url(../img/planet-6.png); }
 
 .transform-active {
   transition: all 5s cubic-bezier(0.55, -0.01, 0.2, 0.99);
@@ -564,6 +617,15 @@ div {
   border-radius: 50%;
   color: lime; }
 
+.explore-6 {
+  z-index: 10;
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  border: solid transparent 2px;
+  border-radius: 50%;
+  color: lime; }
+
 .explore-show {
   visibility: visible;
   transition-delay: 1s !important;
@@ -593,6 +655,11 @@ div {
   margin: 0; }
 
 .explore-text-5 {
+  font-size: 1px;
+  color: lime;
+  margin: 0; }
+
+.explore-text-6 {
   font-size: 1px;
   color: lime;
   margin: 0; }

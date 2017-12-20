@@ -141,6 +141,17 @@ $(document).ready(function(){
   })
 });
 
+//harlem globetrotter gif
+$(document).ready(function() {
+  $('.planet-6').click(function(){
+    $('#broadcast').addClass('planet-6-gif').delay(10000).queue(function(next){
+      $('#broadcast').removeClass('planet-6-gif');
+      next();
+    })
+  })
+})
+//end globetrotter gif
+
 $(document).ready(function(e) {
     $('.planets > div').click(function(e) {
 

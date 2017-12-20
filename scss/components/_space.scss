@@ -11,7 +11,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  overflow: hidden;
+  // overflow: hidden;
 }
 @mixin explore {
   z-index: 10;
@@ -83,6 +83,30 @@
   left: 47%;
   background-image: url(../img/planet-5.png);
 }
+.new-planets {
+  @extend .planets;
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.planet-6 {
+  // @include planet;
+  width: 16px;
+  height: 16px;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: url(../img/planet-6.png);
+}
+
+
 .transform-active {
   transition: all 5s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   width: 200px;
@@ -103,6 +127,9 @@
   @include explore;
 }
 .explore-5 {
+  @include explore;
+}
+.explore-6 {
   @include explore;
 }
 .explore-show {
@@ -126,6 +153,9 @@
   @include explore-text;
 }
 .explore-text-5 {
+  @include explore-text;
+}
+.explore-text-6 {
   @include explore-text;
 }
 .explore-text-show {
@@ -161,6 +191,7 @@
   margin-left: -14900px;
   @include explore-planet;
 }
+
 .alien-1 {
   width: 1px;
 }
@@ -176,6 +207,7 @@
 .alien-5 {
   width: 1px;
 }
+
 .alien-grow {
   width: 400px;
   transition: all 3s ease;
@@ -199,6 +231,7 @@
 .return-to-orbit-5 {
   @include return-to-orbit;
 }
+
 .return-to-orbit-show {
   visibility: visible;
   width: 400px;
