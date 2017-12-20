@@ -1,6 +1,9 @@
 $(document).ready(function(){
-  $(".button").click(function() {
-    $('.explore-text-1').toggleClass('color');
+  $("span.button").click(function() {
+    var color = $(this).attr("data-color");
+    $(".planet p").css("color", color);
+    $(".explore, .return").css("border-color", color);
+    $("span.button").mousedown()
   });
 
   $(".planet-1").click(function() {

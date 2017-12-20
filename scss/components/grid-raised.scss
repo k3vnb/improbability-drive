@@ -5,9 +5,11 @@
   background-color: grey;
   border-radius: 50%;
   box-shadow: -3px 5px 0 black;
+
 }
-.color {
-  color: yellow !important;
+.button:active {
+  width: 90%;
+  height: 45%;
 }
 .btn-grid-raised > div:nth-child(1) .button {
   box-shadow: -3px 5px 0 lime;
