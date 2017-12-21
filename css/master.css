@@ -991,6 +991,17 @@ img#ship {
   left: 0%;
   animation: disco-drop 10s ease-in infinite; }
 
+.star {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  background-color: white;
+  z-index: 11;
+  box-shadow: 0px 2px 6px white; }
+
 .on-top {
   z-index: 100; }
 

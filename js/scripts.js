@@ -115,7 +115,7 @@ $(document).ready(function(e) {
 //end of sliders going red
 //space-tomatoes
 $(document).ready(function() {
-  $('.grid-2 > div').click(function() {
+  $('.pannel-center-left .grid-2 > div').click(function() {
     $('.space-tomato').append("<img src='img/tomato.gif>'");
     $('.space-tomatoes').show();
   })
