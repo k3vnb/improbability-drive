@@ -727,7 +727,7 @@ div {
     .self-destruct-animation #broadcast:after {
       content: "";
       font-size: 310px;
-      animation: countDown 6s linear; }
+      animation: countDown 10s 7s linear; }
   .self-destruct-animation .btns-column div {
     animation: btns-column-destruct 2s ease-in infinite; }
   .self-destruct-animation .pannel-left {
@@ -745,14 +745,24 @@ div {
 
 @keyframes countDown {
   0% {
-    content: "5"; }
+    content: "10"; }
+  10% {
+    content: "9"; }
   20% {
-    content: "4"; }
+    content: "8"; }
+  30% {
+    content: "7"; }
   40% {
-    content: "3"; }
+    content: "6"; }
+  50% {
+    content: "5"; }
   60% {
-    content: "2"; }
+    content: "4"; }
+  70% {
+    content: "3"; }
   80% {
+    content: "2"; }
+  90% {
     content: "1"; } }
 @keyframes shake-x {
   10%, 90% {

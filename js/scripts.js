@@ -16,7 +16,7 @@ $(document).ready(function(){
     $(".pew").toggleClass('fire-animation');
   });
   $(".self-destruct").click(function() {
-    $('.ctrl-pnl').toggleClass('self-destruct-animation').delay(6000).queue(function(next){
+    $('.ctrl-pnl').toggleClass('self-destruct-animation').delay(17000).queue(function(next){
         $(".ctrl-pnl").removeClass('self-destruct-animation');
         next();
     });
