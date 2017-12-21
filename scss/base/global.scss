@@ -1,8 +1,8 @@
 body {
   margin: 0;
 }
-div {
-    box-shadow: 1px 1px 3px #00000080;
+div:not(.planets div) {
+  box-shadow: 1px 1px 3px #00000080;
 }
 *:not(body), *:not(html) {
   box-sizing: border-box;

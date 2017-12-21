@@ -14,6 +14,30 @@
             animation: countDown 6s linear;
       }
   }
+  .btns-column div {
+    animation: btns-column-destruct 2s ease-in infinite;
+  }
+  .pannel-left {
+    animation: destruction-glow-panel-left .5s linear infinite;
+  }
+  .pannel-left-corner {
+    animation: destruction-glow-panel-left-corner .5s ease infinite;
+  }
+  .pannel-center-left {
+    animation: destruction-glow-panel-left-center .5s ease-in infinite;
+  }
+  .pannel-center-right{
+    animation: destruction-glow-panel-right-center .5s linear infinite;
+  }
+  .pannel-right-corner {
+    animation: destruction-glow-panel-right-corner .5s ease infinite;
+  }
+  .pannel-right {
+    animation: destruction-glow-right-panel .5s linear infinite;
+  }
+  .meter {
+    @extend .red-sliders;
+  }
 }
 
 @keyframes countDown {

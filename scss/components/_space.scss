@@ -95,19 +95,20 @@
   left: 87%;
   background-image: url(../img/discoball.png);
 }
-// .new-planets {
-//   @extend .planets;
-//   height: 20px;
-//   width: 20px;
-//   position: absolute;
-//   top: 10%;
-//   left: 90%;
-//   transition: all 1s ease;
-//   transform: scale();
-//   &:hover {
-//     transform: scale(4, 4);
-//   }
-// }
+.space-tomatoes {
+  @extend .planets;
+  display: none;
+  height: 420px;
+  width: 420px;
+  position: absolute;
+  top: 10%;
+  left: 30%;
+  transition: all 1s ease;
+  // transform: scale();
+  // &:hover {
+  //   transform: scale(2, 2);
+  // }
+}
 // .planet-6 {
 //   width: 90%;
 //   height: 90%;
@@ -243,7 +244,19 @@
 .return-to-orbit-7 {
   @include return-to-orbit;
 }
+#discoworld {
+  height: 1000px;
+  width: 100vw;
+}
 
+.discoworlds {
+  z-index: 100;
+  background-image: url(../img/discoball2.gif);
+  position: absolute;
+  top: -1000px;
+  left: 0%;
+  animation: disco-drop 10s ease-in infinite;
+}
 
 
 .on-top {
