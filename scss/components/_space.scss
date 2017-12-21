@@ -16,6 +16,7 @@
 div#discoworld {
     pointer-events: none;
 }
+
 .explore {
   z-index: 10;
   visibility: hidden;
@@ -136,15 +137,17 @@ div#discoworld {
 //   background-image: url(../img/discoball.png);
 // }
 
-
+.planet{
+    transition: all 4s cubic-bezier(0.55, -0.01, 0.2, 0.99);
+}
 .transform-active {
-  transition: all 4s cubic-bezier(0.55, -0.01, 0.2, 0.99);
+  // transition: all 4s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   width: 200px;
   height: 200px;
   top: 25%;
   left: 45%;
   .explore-text{
-      transition: all 2s ease-in;
+      transition: font-size 2s ease-in;
       font-size: 50px;
   }
 }

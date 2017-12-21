@@ -36,10 +36,19 @@ $(document).ready(function(){
 
 
   $(".planet").click(function() {
+      var thisBack = $(this).attr('data-stars');
+      $('.space').delay(5000).queue(function(){
+        $(this).toggleClass('zoom');
+    });
     $(this).toggleClass('transform-active');
     $(this).children('.explore').toggleClass('explore-show');
     $(this).children('.explore-text').toggleClass('explore-text-show');
     $(this).siblings(".planet").toggleClass('go-away');
+    if ($('.side').attr('style') === 'background-image: url("img/' + thisBack + '");') {
+        $('.side').css('background-image', '');
+    } else {
+        $('.side').css('background-image', 'url(img/' + thisBack + ')');
+    }
   });
   $(".explore").click(function() {
     $(this).parent().toggleClass('explore-planet')
@@ -48,6 +57,7 @@ $(document).ready(function(){
 
   })
   $(".return").click(function() {
+
     $(this).parent().toggleClass('explore-planet')
     $(this).siblings('.alien').toggleClass('alien-grow')
     $(this).siblings('.alien').toggleClass('alien-shrink')
@@ -75,32 +85,31 @@ $(document).ready(function(){
 
 //change the channel
   $('.channel').click(function(){
+      $('#broadcast').html(``);
+      $('#broadcast').clearQueue();
+
       var thisChn = $(this).attr('data-channel');
       $('#broadcast').html(`<img src="img/` + thisChn + `.gif">`).delay(5000).queue(function(next){
-         $('#broadcast').html('');
+         $('#broadcast').html(``);
       });
   })
 });
 
 //harlem globetrotter gif
-$(document).ready(function() {
   $('.planet-6').click(function(){
     $('#broadcast').addClass('planet-6-gif').delay(10000).queue(function(next){
       $('#broadcast').removeClass('planet-6-gif');
       next();
-    })
-  })
-})
+  });
+});
 //end globetrotter gif
 //disco gif
-$(document).ready(function() {
   $('.planet-7').click(function(){
     $('#broadcast').addClass('planet-7-gif').delay(10000).queue(function(next){
       $('#broadcast').removeClass('planet-7-gif');
       next();
-    })
-  })
-})
+  });
+});
 //end disco gif
 $(document).ready(function() {
   $('.planet-7').one("click", function(){
