@@ -13,7 +13,7 @@
   background-position: 50% 50%;
   // overflow: hidden;
 }
-@mixin explore {
+.explore {
   z-index: 10;
   visibility: hidden;
   width: 1px;
@@ -28,7 +28,7 @@
   height: 30000px;
   z-index: 10;
 }
-@mixin explore-text {
+.explore-text {
   font-size: 1px;
   color: lime;
   margin: 0;
@@ -83,28 +83,54 @@
   left: 47%;
   background-image: url(../img/planet-5.png);
 }
-.new-planets {
-  @extend .planets;
-  height: 20px;
-  width: 20px;
-  position: absolute;
-  top: 10%;
-  left: 10%;
-}
 .planet-6 {
-  // @include planet;
-  width: 16px;
-  height: 16px;
-  z-index: 99;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
+  @include planet;
+  top: 10%;
+  left: 97%;
   background-image: url(../img/planet-6.png);
 }
+.planet-7 {
+  @include planet;
+  top: 15%;
+  left: 87%;
+  background-image: url(../img/discoball.png);
+}
+// .new-planets {
+//   @extend .planets;
+//   height: 20px;
+//   width: 20px;
+//   position: absolute;
+//   top: 10%;
+//   left: 90%;
+//   transition: all 1s ease;
+//   transform: scale();
+//   &:hover {
+//     transform: scale(4, 4);
+//   }
+// }
+// .planet-6 {
+//   width: 90%;
+//   height: 90%;
+//   z-index: 99;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   flex-direction: column;
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: 50% 50%;
+//   background-image: url(../img/planet-6.png);
+// }
+// .new-planets2 {
+//   @extend .new-planets;
+//   top: 20%;
+//   left: 94%
+// }
+
+// .planet-7 {
+//   @extend .planet-6;
+//   background-image: url(../img/discoball.png);
+// }
 
 
 .transform-active {
@@ -113,25 +139,12 @@
   height: 200px;
   top: 25%;
   left: 45%;
+  .explore-text{
+      transition: all 2s ease-in;
+      font-size: 50px;
+  }
 }
-.explore-1 {
-  @include explore;
-}
-.explore-2 {
-  @include explore;
-}
-.explore-3 {
-  @include explore;
-}
-.explore-4 {
-  @include explore;
-}
-.explore-5 {
-  @include explore;
-}
-.explore-6 {
-  @include explore;
-}
+
 .explore-show {
   visibility: visible;
   transition-delay: 1s !important;
@@ -140,53 +153,50 @@
   width: 20px;
   height: 20px;
 }
-.explore-text-1 {
-  @include explore-text;
-}
-.explore-text-2 {
-  @include explore-text;
-}
-.explore-text-3 {
-  @include explore-text;
-}
-.explore-text-4 {
-  @include explore-text;
-}
-.explore-text-5 {
-  @include explore-text;
-}
-.explore-text-6 {
-  @include explore-text;
-}
-.explore-text-show {
-  transition: all 2s ease-in;
-  font-size: 50px;
-}
+
 .explore:hover  {
   cursor: pointer;
 }
 
-.explore-planet-1 {
-  margin-top: -14900px;
+// .explore-planet-1 {
+//   margin-top: -14900px;
+//   margin-left: -14900px;
+//   @include explore-planet;
+// }
+// .explore-planet-2 {
+//   margin-top: -15100px;
+//   margin-left: -14900px;
+//   @include explore-planet;
+// }
+// .explore-planet-3 {
+//   margin-top: -15100px;
+//   margin-left: -14600px;
+//   @include explore-planet;
+// }
+// .explore-planet-4 {
+//   margin-top: -14800px;
+//   margin-left: -15400px;
+//   @include explore-planet;
+// }
+.explore-planet {
+  margin-top: -15100px;
   margin-left: -14900px;
   @include explore-planet;
+  .return {
+    visibility: visible;
+    width: 400px;
+    height: 100px;
+    font-size: 50px;
+    transition-delay: 1s !important;
+    transition: all 1s ease-in;
+  }
 }
-.explore-planet-2 {
+.explore-planet-6 {
   margin-top: -15100px;
   margin-left: -14900px;
   @include explore-planet;
 }
-.explore-planet-3 {
-  margin-top: -15100px;
-  margin-left: -14600px;
-  @include explore-planet;
-}
-.explore-planet-4 {
-  margin-top: -14800px;
-  margin-left: -15400px;
-  @include explore-planet;
-}
-.explore-planet-5 {
+.explore-planet-7 {
   margin-top: -15100px;
   margin-left: -14900px;
   @include explore-planet;
@@ -194,22 +204,23 @@
 
 .alien {
   height: 0;
-}
-.alien-1 {
   width: 1px;
 }
-.alien-2 {
-  width: 1px;
-}
-.alien-3 {
-  width: 1px;
-}
-.alien-4 {
-  width: 1px;
-}
-.alien-5 {
-  width: 1px;
-}
+// .alien-1 {
+//   width: 1px;
+// }
+// .alien-2 {
+//   width: 1px;
+// }
+// .alien-3 {
+//   width: 1px;
+// }
+// .alien-4 {
+//   width: 1px;
+// }
+// .alien-5 {
+//   width: 1px;
+// }
 
 .alien-grow {
   width: 400px;
@@ -236,14 +247,7 @@
   @include return-to-orbit;
 }
 
-.return-to-orbit-show {
-  visibility: visible;
-  width: 400px;
-  height: 100px;
-  font-size: 50px;
-  transition-delay: 1s !important;
-  transition: all 1s ease-in;
-}
+
 .on-top {
   z-index: 100;
 }

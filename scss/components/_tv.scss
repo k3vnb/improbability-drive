@@ -2,6 +2,7 @@
   height: 100%;
   width: 100%;
   border: 2px solid black;
+  grid-row: span 2;
 }
 .tv-show {
   width: 99%;
@@ -18,4 +19,15 @@
   background-repeat: no-repeat;
   background-size: cover;
   z-index: 20;
+}
+.dooms-gif {
+  background-image: url(../img/doom.gif);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  z-index: 20;
+}
+.planet-7-gif {
+  @extend .planet-6-gif;
+  background-image: url(../img/soultrain.gif);
 }
