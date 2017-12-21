@@ -48,19 +48,20 @@ $(document).ready(function(){
 
   })
   $(".return").click(function() {
-    $(this).parent().toggleClass('explore-planet')
-    $(this).siblings('.alien').toggleClass('alien-grow')
-    $(this).siblings('.alien').toggleClass('alien-shrink')
-    $(this).siblings('.return').toggleClass('return-to-orbit-show')
+    $(this).parent().toggleClass('explore-planet');
+    $(this).siblings('.alien').toggleClass('alien-grow');
+    $(this).siblings('.alien').toggleClass('alien-shrink');
+    $(this).siblings('.return').toggleClass('return-to-orbit-show');
     $(this).parent().toggleClass('transform-active');
     $(this).siblings('.explore').toggleClass('explore-show');
     $(this).siblings('.explore-text').toggleClass('explore-text-show');
-    $(this).parent().addClass('on-top');
-    // setTimeout(function() {
-      $(this).parent().siblings().toggleClass('go-away');
-      $(this).parent().removeClass('on-top');
-    // }, 2000);
-  })
+    $(this).parent().toggleClass('on-top');
+    setTimeout(function() {
+      $(".planet").toggleClass('go-away');
+      // $(this).parent('').toggleClass('go-away');
+      $(this).parent().toggleClass('on-top');
+    }, 2000);
+  });
   $("span.button").click(function() {
     var color = $(this).attr("data-color");
     $(".planet p").css("color", color);

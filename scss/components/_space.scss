@@ -11,7 +11,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  // overflow: hidden;
 }
 div#discoworld {
     pointer-events: none;
@@ -107,35 +106,7 @@ div#discoworld {
   top: 10%;
   left: 30%;
   transition: all 1s ease;
-  // transform: scale();
-  // &:hover {
-  //   transform: scale(2, 2);
-  // }
 }
-// .planet-6 {
-//   width: 90%;
-//   height: 90%;
-//   z-index: 99;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: 50% 50%;
-//   background-image: url(../img/planet-6.png);
-// }
-// .new-planets2 {
-//   @extend .new-planets;
-//   top: 20%;
-//   left: 94%
-// }
-
-// .planet-7 {
-//   @extend .planet-6;
-//   background-image: url(../img/discoball.png);
-// }
-
 
 .transform-active {
   transition: all 4s cubic-bezier(0.55, -0.01, 0.2, 0.99);
