@@ -33,37 +33,3 @@
 .btns-column div, .round-btns div {
 
 }
-
-
-.hover{
-  animation: animate 0.25s infinite;
-}
-
-
-
-@keyframes animate{
-  0%{
-    cursor: url("../img/hover/frame1.gif"), auto;
-  }
-  15%{
-    cursor: url("../img/hover/frame2.gif"), auto;
-  }
-  30%{
-    cursor: url("../img/hover/frame3.gif"), auto;
-  }
-  45%{
-    cursor: url("../img/hover/frame4.gif"), auto;
-  }
-  60%{
-    cursor: url("../img/hover/frame5.gif"), auto;
-  }
-  75%{
-    cursor: url("../img/hover/frame6.gif"), auto;
-  }
-  90%{
-    cursor: url("../img/hover/frame7.gif"), auto;
-  }
-  100%{
-    cursor: url("../img/hover/frame8.gif"), auto;
-  }
-}
