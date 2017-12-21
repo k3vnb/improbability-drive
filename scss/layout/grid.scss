@@ -69,6 +69,7 @@
     top: -85px;
     box-shadow: 0 0 0 53px red;
     max-height: 378px;
+    transition: .1s ease;
     > div {
         grid-gap: 5px;
         padding: 5px;

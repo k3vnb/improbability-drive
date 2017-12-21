@@ -93,9 +93,17 @@ $(document).ready(function(){
       engine.pause();
       alert.play();
       selfDestruct.play();
+      $('body').addClass('shake');
     $('.ctrl-pnl').toggleClass('self-destruct-animation').delay(17000).queue(function(next){
-
         $(".ctrl-pnl").removeClass('self-destruct-animation');
+        $('body').removeClass('shake');
+
+        $('.pnl').each(function(){
+            var randomX = Math.floor(Math.random()* 100) + 1;
+            var randomy = Math.floor(Math.random()* 100) + 1;
+            var randomz = Math.floor(Math.random()* 100) + 1;
+            $(this).css({'transform': 'translateX(' + randomX + 'px) translateY(' + randomy + 'px) translateZ(' + randomz + 'px) rotateX(' + randomX + 'deg) rotateY(' + randomy + 'deg) rotateZ(' + randomz + 'deg)'})
+        });
         next();
     });
   });
