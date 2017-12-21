@@ -245,6 +245,7 @@ html body {
   background-position: center; }
 
 body {
+  font-family: Geo, Orbitron;
   margin: 0;
   cursor: url("../img/cursor.png"), auto; }
 

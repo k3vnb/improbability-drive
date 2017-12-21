@@ -58,7 +58,7 @@ $(document).ready(function(){
     $(this).parent().toggleClass('on-top');
     setTimeout(function() {
       $(".planet").addClass('go-away');
-      $(this).parent().toggleClass('on-top');
+      $(".planet").removeClass('on-top');
       $(".planet").removeClass('go-away');
     }, 2400);
 
