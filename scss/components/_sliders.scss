@@ -9,10 +9,6 @@
   animation: hide-hyper-space 1s linear infinite!important;
   height: 90%!important;
 }
-.self-destruct-animation .meter {
-  @extend .red-sliders;
-}
-
 
 .meter {
   height: 40%;

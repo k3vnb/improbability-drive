@@ -87,128 +87,25 @@
     box-shadow: 0 0 17px -1px #0bf9f9, 0 0 100px white, -35px 0 8px 52px black, -52px -11px 0 42px #fff;
 
 }
-.self-destruct-animation .pannel-left {
-  animation: destruction-glow-panel-left .5s linear infinite;
-}
 
 .pannel-left-corner {
     box-shadow: 0 0 17px -1px #0bf9f9, 0 0 100px white, -36px -9px 8px 44px black, -40px -9px 0 45px #fff;
-}
-.self-destruct-animation .pannel-left-corner {
-  animation: destruction-glow-panel-left-corner .5s ease infinite;
-
 }
 
 .pannel-center-left {
     box-shadow: 0 0 17px -1px #0bf9f9, 0 0 100px white, -4px 0 8px 53px black, -4px 0 0 55px #fff;
 }
-.self-destruct-animation .pannel-center-left {
-  animation: destruction-glow-panel-left-center .5s ease-in infinite;
-}
 
 .pannel-center-right {
     box-shadow: 0 0 17px -1px #0bf9f9, 0 0 100px white, 50px 0 8px 53px black, 55px 0 0 55px #fff;
-}
-.self-destruct-animation .pannel-center-right{
-  animation: destruction-glow-panel-right-center .5s linear infinite;
 }
 
 .pannel-right-corner {
     box-shadow: 0 0 17px -1px #0bf9f9, 0 0 100px white, 36px -9px 8px 44px black, 40px -9px 0 45px #fff;
 }
-.self-destruct-animation .pannel-right-corner {
-  animation: destruction-glow-panel-right-corner .5s ease infinite;
-}
+
 .pannel-right {
     box-shadow: 0 0 17px -1px #0bf9f9, 0 0 100px white, 35px 0 8px 52px black, 52px -11px 0 42px #fff;
-}
-.self-destruct-animation .pannel-right {
-  animation: destruction-glow-right-panel .5s linear infinite;
-
-}
-@keyframes destruction-glow-right-panel {
-  0% {
-
-  }
-  20% {
-    box-shadow: 0 0 17px 3px #0bf9f9, 0 0 100px white, 35px 0 8px 52px black, 52px -11px 0 42px #fff;
-  }
-  50% {
-    box-shadow: 0 0 17px 30px #f90b0b, 0 0 100px white, 35px 0 8px 52px black, 52px -11px 0 42px #fff;
-  }
-  70% {
-    box-shadow: 0 0 17px 3px #0bf9f9, 0 0 100px white, 35px 0 8px 52px black, 52px -11px 0 42px #fff;
-  }
-}
-@keyframes destruction-glow-panel-right-corner {
-  0% {
-
-  }
-  20% {
-    box-shadow: 0 0 17px 3px #0bf9f9, 0 0 100px white, 36px -9px 8px 44px black, 40px -9px 0 45px #fff;
-  }
-  50% {
-    box-shadow: 0 0 17px 30px #f90b0b, 0 0 100px white, 36px -9px 8px 44px black, 40px -9px 0 46px #fff;
-  }
-  70% {
-    box-shadow: 0 0 17px 3px #0bf9f9, 0 0 100px white, 36px -9px 8px 44px black, 40px -9px 0 46px #fff;
-  }
-}
-@keyframes destruction-glow-panel-right-center {
-  0% {
-
-  }
-  20% {
-    box-shadow: 0 0 17px 3px #0bf9f9, 0 0 100px white, 50px 0 8px 53px black, 55px 0 0 55px #fff;
-  }
-  50% {
-    box-shadow: 0 0 17px 30px #f90b0b, 0 0 100px white, 50px 0 8px 53px black, 55px 0 0 55px #fff;
-  }
-  70% {
-    box-shadow: 0 0 17px 3px #0bf9f9, 0 0 100px white, 50px 0 8px 53px black, 55px 0 0 55px #fff;
-  }
-}
-@keyframes destruction-glow-panel-left-corner {
-  0% {
-
-  }
-  20% {
-    box-shadow: 0 0 17px 3px #0bf9f9, 0 0 100px white, -36px -9px 8px 44px black, -40px -9px 0 45px #fff;
-  }
-  50% {
-    box-shadow: 0 0 17px 30px #f90b0b, 0 0 100px white, -36px -9px 8px 44px black, -40px -9px 0 45px #fff;
-  }
-  70% {
-    box-shadow: 0 0 17px 3px #0bf9f9, 0 0 100px white, -36px -9px 8px 44px black, -40px -9px 0 45px #fff;
-  }
-}
-@keyframes destruction-glow-panel-left-center {
-  0% {
-
-  }
-  20% {
-    box-shadow: 0 0 17px 3px #0bf9f9, 0 0 100px white, -4px 0 8px 53px black, -4px 0 0 55px #fff;
-  }
-  50% {
-    box-shadow: 0 0 17px 30px #f90b0b, 0 0 100px white, -4px 0 8px 53px black, -4px 0 0 55px #fff;
-  }
-  70% {
-    box-shadow: 0 0 17px 3px #0bf9f9, 0 0 100px white, -4px 0 8px 53px black, -4px 0 0 55px #fff;
-  }
-}
-@keyframes destruction-glow-panel-left {
-  0% {
-
-  }
-  20% {
-    box-shadow: 0 0 17px 3px #0bf9f9, 0 0 100px white, -35px 0 8px 52px black, -52px -11px 0 42px #fff;
-  }
-  50% {
-    box-shadow: 0 0 17px 30px #f90b0b, 0 0 100px white, -35px 0 8px 52px black, -52px -11px 0 42px #fff;
-  }
-  70% {
-    box-shadow: 0 0 17px 3px #0bf9f9, 0 0 100px white, -35px 0 8px 52px black, -52px -11px 0 42px #fff;
-  }
 }
 
 .pnl-back {

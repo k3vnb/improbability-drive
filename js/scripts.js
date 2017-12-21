@@ -249,3 +249,15 @@ $(document).ready(function(e) {
     });
   });
 //end of sliders going red
+//space-tomatoes
+$(document).ready(function() {
+  $('.grid-2 > div').click(function() {
+    $('.space-tomato').append("<img src='img/tomato.gif>'");
+    $('.space-tomatoes').show();
+  })
+  $(".wiper-switch input").click(function(){
+    $('.space-tomatoes').hide(500);
+    $('.space-tomato').children().remove(500);
+  })
+})
+//end of space-tomatoes
