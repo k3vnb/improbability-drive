@@ -1,9 +1,29 @@
 .self-destruct {
-  background-color: red;
+    background-color: red;
   border-radius: 50%;
   margin: 10%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: -19px 6px 0 2px #000;
+    &:after {
+        content: "NO!";
+        font-size: 86px;
+        position: relative;
+        top: 12px;
+    }
 }
-
+.smaller {
+    max-width: 50%;
+    margin: 0 25%;
+} 
+.shake {
+    position: relative;
+    height: 100vh!important;
+    animation: shake-x-small .7s infinite, shake-y-small .6s infinite;
+}
 .self-destruct-animation {
   animation: shake-x .7s infinite, shake-y .6s infinite;
   #broadcast {
@@ -88,6 +108,21 @@
   }
 
 }
+@keyframes shake-x-small {
+  10%, 90% {
+    left: -2px;
+  }
+  20%, 80% {
+    left: 5px;
+  }
+  30%, 50%, 70%  {
+    left: -8px;
+  }
+  40%, 60% {
+    left: 8px;
+  }
+
+}
 @keyframes shake-y {
   10%, 90% {
     bottom: 0px;
@@ -102,6 +137,20 @@
     bottom: 50px;
   }
 
+}
+@keyframes shake-y-small {
+    10%, 90% {
+      left: -2px;
+    }
+    20%, 80% {
+      left: 5px;
+    }
+    30%, 50%, 70%  {
+      left: -8px;
+    }
+    40%, 60% {
+      left: 8px;
+    }
 }
 
 @keyframes btn-blink {
