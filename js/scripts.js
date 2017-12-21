@@ -244,6 +244,11 @@ $(document).ready(function(e) {
 //end of sliders going red
 //space-tomatoes
 $(document).ready(function() {
+  var act = $('.wiper').hasClass("wipe-animation");
+
+  if(act){
+    $('.space-tomatoes').hide(700);
+  }
   $('.pannel-center-left .grid-2 > div').click(function() {
     $('.space-tomatoes').addClass("space-tomatoes-show");
     $('.space-tomatoes').show(10);
@@ -251,16 +256,16 @@ $(document).ready(function() {
   $(".wiper-switch input").click(function(){
     $('.space-tomatoes').hide(700);
     // $('.space-tomatoes').removeClass("space-tomatoes-show");
+      });
   });
-})
 //end of space-tomatoes
 
 $(function(){
-    setInterval(randoFunction, 2000);  //1000 is milliseconds to next random check
+    setInterval(randoFunction, 2000);  //2000 is milliseconds to next random check
 });
 
 function randoFunction(){
-    var chance = 50;  //1 in 10 chance to show the div
+    var chance = 60;  //1 in 60 chance to show the div
     var rand = Math.floor(Math.random()*chance)+1;  //generate random number 1-chance
     if(rand == 1) {
         $('.space-tomatoes').show();
@@ -269,5 +274,9 @@ function randoFunction(){
     else if (rand == 2) {
       $('.space-tomatoes').show();
       $('.space-tomatoes').addClass("space-face");
+    }
+    var act = $(".wiper").hasClass('wipe-animation');
+    if(act) {
+      $(".space-tomatoes").hide(1200);
     }
 }

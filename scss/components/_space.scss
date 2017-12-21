@@ -221,11 +221,37 @@ div#discoworld {
 }
 .space-face {
   background-image: url(../img/deadface.png);
+  max-height: 200px;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  transition: background-image 1s;
-  animation: space-faces 1s;
+  // transition: background-image 1s;
+  animation: space-faces 1.5s ease-in;
+}
+@keyframes bg {
+  0% {
+    background-image: url(../img/tomato-frame-1.gif);
+  }
+  10% {
+    background-image: url(../img/tomato-frame-2.gif);
+  }
+  20% {
+    background-image: url(../img/tomato-frame-3.gif);
+  }
+  50% {
+    background-image: url(../img/tomato-frame-4.gif);
+  }
+}
+@keyframes space-faces {
+  0% {
+    background-image: url(../img/hello.png);
+    background-size: 2px;
+  }
+  98% {background-image: url(../img/hello.png)}
+  99% {
+    background-image: url(../img/deadface.png);
+    background-size: 200px;
+  }
 }
 
 .star {
