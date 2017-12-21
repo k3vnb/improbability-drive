@@ -279,6 +279,6 @@ function randoFunction(){
     }
     var act = $(".wiper").hasClass('wipe-animation');
     if(act) {
-      $(".space-tomatoes").hide(1000);
+      $(".space-tomatoes").hide(1200);
     }
 }
