@@ -89,6 +89,17 @@
   left: 97%;
   background-image: url(../img/planet-6.png);
 }
+.alien-grow {
+    position: fixed;
+    top: 3%;
+    left: 50%;
+}
+
+.return {
+    position: fixed;
+    top: 1%;
+    right: 1%;
+}
 .planet-7 {
   @include planet;
   top: 15%;
@@ -256,6 +267,22 @@
   top: -1000px;
   left: 0%;
   animation: disco-drop 10s ease-in infinite;
+}
+.space-tomatoes-show {
+  background-image: url(../img/tomato-frame-4.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: background-image 1s;
+  animation: bg 2s ease;
+}
+.space-face {
+  background-image: url(../img/deadface.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: background-image 1s;
+  animation: space-faces 1s;
 }
 
 .star {

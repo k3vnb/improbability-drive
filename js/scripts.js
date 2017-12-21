@@ -247,12 +247,29 @@ $(document).ready(function(e) {
 //space-tomatoes
 $(document).ready(function() {
   $('.pannel-center-left .grid-2 > div').click(function() {
-    $('.space-tomato').append("<img src='img/tomato.gif>'");
-    $('.space-tomatoes').show();
+    $('.space-tomatoes').addClass("space-tomatoes-show");
+    $('.space-tomatoes').show(10);
   })
   $(".wiper-switch input").click(function(){
-    $('.space-tomatoes').hide(500);
-    $('.space-tomato').children().remove(500);
-  })
+    $('.space-tomatoes').hide(700);
+    // $('.space-tomatoes').removeClass("space-tomatoes-show");
+  });
 })
 //end of space-tomatoes
+
+$(function(){
+    setInterval(randoFunction, 2000);  //1000 is milliseconds to next random check
+});
+
+function randoFunction(){
+    var chance = 50;  //1 in 10 chance to show the div
+    var rand = Math.floor(Math.random()*chance)+1;  //generate random number 1-chance
+    if(rand == 1) {
+        $('.space-tomatoes').show();
+        $('.space-tomatoes').addClass("space-tomatoes-show");
+    }
+    else if (rand == 2) {
+      $('.space-tomatoes').show();
+      $('.space-tomatoes').addClass("space-face");
+    }
+}
