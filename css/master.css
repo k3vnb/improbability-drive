@@ -975,6 +975,16 @@ div#discoworld {
   left: 97%;
   background-image: url(../img/planet-6.png); }
 
+.alien-grow {
+  position: fixed;
+  top: 3%;
+  left: 50%; }
+
+.return {
+  position: fixed;
+  top: 1%;
+  right: 1%; }
+
 .planet-7 {
   width: 20px;
   height: 20px;
@@ -1139,6 +1149,33 @@ div#discoworld {
   top: -1000px;
   left: 0%;
   animation: disco-drop 10s ease-in infinite; }
+
+.space-tomatoes-show {
+  background-image: url(../img/tomato-frame-4.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: background-image 1s;
+  animation: bg 2s ease; }
+
+.space-face {
+  background-image: url(../img/deadface.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: background-image 1s;
+  animation: space-faces 1s; }
+
+.star {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  background-color: white;
+  z-index: 11;
+  box-shadow: 0px 2px 6px white; }
 
 .on-top {
   z-index: 100; }
@@ -1461,5 +1498,20 @@ div#discoworld {
     box-shadow: 0 0 17px 30px #f90b0b, 0 0 100px white, -35px 0 8px 52px black, -52px -11px 0 42px #fff; }
   70% {
     box-shadow: 0 0 17px 3px #0bf9f9, 0 0 100px white, -35px 0 8px 52px black, -52px -11px 0 42px #fff; } }
+@keyframes bg {
+  0% {
+    background-image: url(../img/tomato-frame-1.gif); }
+  10% {
+    background-image: url(../img/tomato-frame-2.gif); }
+  20% {
+    background-image: url(../img/tomato-frame-3.gif); }
+  50% {
+    background-image: url(../img/tomato-frame-4.gif); } }
+@keyframes space-faces {
+  0% {
+    background-image: url(../img/hello.png);
+    background-size: 2px; }
+  90% {
+    background-size: 415px; } }
 
 /*# sourceMappingURL=master.css.map */
