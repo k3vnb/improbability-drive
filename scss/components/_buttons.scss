@@ -1,4 +1,10 @@
-.btns-column div, .round-btns div {width: 30px;height: 30px;box-shadow: inset -5px -5px 30px #00000085, inset -1px -1px 2px, 2px 2px 3px #0000008c;background: #ff0808;border-radius: 50%;position: relative;}
+.btns-column div, .round-btns div {width: 30px;height: 30px;box-shadow: inset -5px -5px 30px #00000085, inset -1px -1px 2px, 2px 2px 3px #0000008c;background: #ff0808;border-radius: 50%;position: relative;
+&:active{background: #ff2222bf; position: relative; top: 1px; left: 1px;}}
+
+.self-destruct-animation .btns-column div {
+  animation: btns-column-destruct 2s ease-in infinite;
+}
+
 
 .btns-column, .round-btns {
     align-items: center;
@@ -21,10 +27,11 @@
 }
 
 .pannel-right .btn-grid-flat {
-    grid-gap: 40px;
+    grid-gap: 8%;
     padding: 15px;
 }
 
 .pannel-right .btn-grid-flat div {
     background: #d24141;
+        height: 28px;
 }
