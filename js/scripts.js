@@ -277,4 +277,8 @@ function randoFunction(){
       $('.space-tomatoes').show();
       $('.space-tomatoes').addClass("space-face");
     }
+    var act = $(".wiper").hasClass('wipe-animation');
+    if(act) {
+      $(".space-tomatoes").hide(1000);
+    }
 }
