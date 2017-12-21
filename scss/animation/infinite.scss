@@ -195,15 +195,19 @@
 @keyframes disco-drop {
   0% {
     top: -1000px;
+    background-color: #ff000040;
   }
   20% {
     top: 0%;
+    background-color: #1e00ff40;
   }
   60% {
-    top: 0%
+    top: 0%;
+    background-color: #ffee007d;
   }
   0% {
     top: -1000px;
+    background-color: #ff8f00cf;
   }
 }
 $borderColors: (

@@ -11,7 +11,7 @@ html body {
   top: 0;
   display: inline-block;
   vertical-align: middle;
-  perspective: 1000000px; }
+  perspective: 100000000px; }
 
 .center-warp {
   animation: centralize 4s cubic-bezier(0.55, -0.01, 0.2, 0.99), warpSpeed 4s cubic-bezier(1, 0, 1, 0); }
@@ -21,7 +21,8 @@ html body {
     perspective-origin: 50vw 20vh; } }
 @keyframes warpSpeed {
   0% {
-    animation-timing-function: cubic-bezier(0, 0.9, 0, 1); }
+    animation-timing-function: cubic-bezier(0, 0.9, 0, 1);
+    perspective: 1000000px; }
   20% {
     perspective: 5px;
     animation-timing-function: linear; }
@@ -107,6 +108,114 @@ html body {
   background-size: cover;
   z-index: 20; }
 
+.channel-1 {
+  background-image: url(../img/channel-1.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-2 {
+  background-image: url(../img/channel-2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-3 {
+  background-image: url(../img/channel-3.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-4 {
+  background-image: url(../img/channel-4.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-5 {
+  background-image: url(../img/channel-5.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-6 {
+  background-image: url(../img/channel-6.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-7 {
+  background-image: url(../img/channel-7.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-8 {
+  background-image: url(../img/channel-8.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-9 {
+  background-image: url(../img/channel-9.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-10 {
+  background-image: url(../img/channel-10.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-11 {
+  background-image: url(../img/channel-11.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-12 {
+  background-image: url(../img/channel-12.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-13 {
+  background-image: url(../img/channel-13.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-14 {
+  background-image: url(../img/channel-2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-15 {
+  background-image: url(../img/channel-1.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-16 {
+  background-image: url(../img/channel-2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-17 {
+  background-image: url(../img/channel-1.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
+.channel-18 {
+  background-image: url(../img/channel-2.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 20; }
+
 .dooms-gif {
   background-image: url(../img/doom.gif);
   background-repeat: no-repeat;
@@ -135,7 +244,8 @@ html body {
   background-position: center; }
 
 body {
-  margin: 0; }
+  margin: 0;
+  cursor: url("../img/cursor.png"), auto; }
 
 div {
   box-shadow: 1px 1px 3px #00000080; }
@@ -714,6 +824,22 @@ div {
     background: red; }
   100% {
     background: red; } }
+.pew {
+  height: 200px;
+  width: 2px;
+  background-color: #15ff00;
+  position: absolute;
+  left: 50%;
+  z-index: -90;
+  margin-top: 100px; }
+
+.fire-animation {
+  animation: fire .3s linear; }
+
+@keyframes fire {
+  100% {
+    height: 0px;
+    margin-top: -200px; } }
 img#health {
   position: relative;
   object-fit: contain;
@@ -890,7 +1016,7 @@ img#ship {
   background-image: url(../img/discoball.png); }
 
 .transform-active {
-  transition: all 5s cubic-bezier(0.55, -0.01, 0.2, 0.99);
+  transition: all 4s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   width: 200px;
   height: 200px;
   top: 25%;
@@ -924,22 +1050,6 @@ img#ship {
     font-size: 50px;
     transition-delay: 1s !important;
     transition: all 1s ease-in; }
-
-.explore-planet-6 {
-  margin-top: -15100px;
-  margin-left: -14900px;
-  transition: all 3s ease;
-  width: 30000px;
-  height: 30000px;
-  z-index: 10; }
-
-.explore-planet-7 {
-  margin-top: -15100px;
-  margin-left: -14900px;
-  transition: all 3s ease;
-  width: 30000px;
-  height: 30000px;
-  z-index: 10; }
 
 .alien {
   height: 0;
@@ -1009,6 +1119,28 @@ img#ship {
   justify-content: center;
   align-items: center; }
 
+.return-to-orbit-6 {
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  border: lime solid 2px;
+  color: lime;
+  font-size: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.return-to-orbit-7 {
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  border: lime solid 2px;
+  color: lime;
+  font-size: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
 .on-top {
   z-index: 100; }
 
@@ -1063,17 +1195,19 @@ img#ship {
 
 .wiper-1 {
   position: absolute;
-  width: 35%;
+  width: 800px;
   height: 20px;
   background-color: grey;
+  z-index: -100;
   top: 20%;
   left: 55%; }
 
 .wiper-2 {
   position: absolute;
-  width: 35%;
+  width: 800px;
   height: 20px;
   background-color: grey;
+  z-index: -100;
   top: 20%;
   left: 25%; }
 
@@ -1094,7 +1228,7 @@ img#ship {
   .wiper-switch label {
     cursor: pointer;
     text-indent: -9999px;
-    width: 40px;
+    width: 60px;
     height: 20px;
     background: grey;
     display: block;
@@ -1117,8 +1251,13 @@ img#ship {
   .wiper-switch label:active:after {
     width: 30px; }
 
+<<<<<<< HEAD
 .wiper {
   z-index: -2; }
+=======
+.active {
+  background-color: red !important; }
+>>>>>>> e9636f610497b72675cea4865c2ccd442143352f
 
 @keyframes scan {
   from {
@@ -1243,13 +1382,17 @@ img#ship {
     box-shadow: 0px 2px 5px #ff08be8c; } }
 @keyframes disco-drop {
   0% {
-    top: -1000px; }
+    top: -1000px;
+    background-color: #ff000040; }
   20% {
-    top: 0%; }
+    top: 0%;
+    background-color: #1e00ff40; }
   60% {
-    top: 0%; }
+    top: 0%;
+    background-color: #ffee007d; }
   0% {
-    top: -1000px; } }
+    top: -1000px;
+    background-color: #ff8f00cf; } }
 @keyframes borderBlink1 {
   0% {
     box-shadow: inset 0 0 0px 0px black; }
@@ -1295,7 +1438,6 @@ img#ship {
   position: absolute;
   top: -1000px;
   left: 0%;
-  content: "<audio\a   src='http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg'\a   autoplay>\a   Your browser does not support the <code>audio</code> element.\a</audio>";
   animation: disco-drop 10s ease-in infinite; }
 
 /*# sourceMappingURL=master.css.map */
