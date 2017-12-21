@@ -59,7 +59,7 @@ $(document).ready(function(){
   });
   $(".self-destruct").click(function() {
       selfDestruct.play();
-    $('.ctrl-pnl').toggleClass('self-destruct-animation').delay(6000).queue(function(next){
+    $('.ctrl-pnl').toggleClass('self-destruct-animation').delay(17000).queue(function(next){
 
         $(".ctrl-pnl").removeClass('self-destruct-animation');
         next();
@@ -83,10 +83,19 @@ $(document).ready(function(){
 
 
   $(".planet").click(function() {
+      var thisBack = $(this).attr('data-stars');
+      $('.space').delay(5000).queue(function(){
+        $(this).toggleClass('zoom');
+    });
     $(this).toggleClass('transform-active');
     $(this).children('.explore').toggleClass('explore-show');
     $(this).children('.explore-text').toggleClass('explore-text-show');
     $(this).siblings(".planet").toggleClass('go-away');
+    if ($('.side').attr('style') === 'background-image: url("img/' + thisBack + '");') {
+        $('.side').css('background-image', '');
+    } else {
+        $('.side').css('background-image', 'url(img/' + thisBack + ')');
+    }
   });
   $(".explore").click(function() {
     $(this).parent().toggleClass('explore-planet')
@@ -120,135 +129,35 @@ $(document).ready(function(){
     $(this).addClass('active');
     $(this).parent().children().not(this).removeClass('active');
   });
-    $(".ch-1").click(function() {
-      $('#broadcast').addClass('channel-1').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-1');
-        next();
+
+
+//change the channel
+  $('.channel').click(function(){
+      $('#broadcast').html(``);
+      $('#broadcast').clearQueue();
+
+      var thisChn = $(this).attr('data-channel');
+      $('#broadcast').html(`<img src="img/` + thisChn + `.gif">`).delay(5000).queue(function(next){
+         $('#broadcast').html(``);
       });
-    });
-    $(".ch-2").click(function() {
-      $('#broadcast').addClass('channel-2').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-2');
-        next();
-      });
-    });
-    $(".ch-3").click(function() {
-      $('#broadcast').addClass('channel-3').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-3');
-        next();
-      });
-    });
-    $(".ch-4").click(function() {
-      $('#broadcast').addClass('channel-4').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-4');
-        next();
-      });
-    });
-    $(".ch-5").click(function() {
-      $('#broadcast').addClass('channel-5').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-5');
-        next();
-      });
-    });
-    $(".ch-6").click(function() {
-      $('#broadcast').addClass('channel-6').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-6');
-        next();
-      });
-    });
-    $(".ch-7").click(function() {
-      $('#broadcast').addClass('channel-7').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-7');
-        next();
-      });
-    });
-    $(".ch-8").click(function() {
-      $('#broadcast').addClass('channel-8').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-8');
-        next();
-      });
-    });
-    $(".ch-9").click(function() {
-      $('#broadcast').addClass('channel-9').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-9');
-        next();
-      });
-    });
-    $(".ch-10").click(function() {
-      $('#broadcast').addClass('channel-10').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-10');
-        next();
-      });
-    });
-    $(".ch-11").click(function() {
-      $('#broadcast').addClass('channel-11').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-11');
-        next();
-      });
-    });
-    $(".ch-12").click(function() {
-      $('#broadcast').addClass('channel-12').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-12');
-        next();
-      });
-    });
-    $(".ch-13").click(function() {
-      $('#broadcast').addClass('channel-13').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-13');
-        next();
-      });
-    });
-    $(".ch-14").click(function() {
-      $('#broadcast').addClass('channel-14').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-14');
-        next();
-      });
-    });
-    $(".ch-15").click(function() {
-      $('#broadcast').addClass('channel-15').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-15');
-        next();
-      });
-    });
-    $(".ch-16").click(function() {
-      $('#broadcast').addClass('channel-16').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-16');
-        next();
-      });
-    });
-    $(".ch-17").click(function() {
-      $('#broadcast').addClass('channel-17').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-17');
-        next();
-      });
-    });
-    $(".ch-18").click(function() {
-      $('#broadcast').addClass('channel-18').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-18');
-        next();
-      });
-    });
+  })
 });
 
 //harlem globetrotter gif
-$(document).ready(function() {
   $('.planet-6').click(function(){
     $('#broadcast').addClass('planet-6-gif').delay(10000).queue(function(next){
       $('#broadcast').removeClass('planet-6-gif');
       next();
-    })
-  })
-})
+  });
+});
 //end globetrotter gif
 //disco gif
-$(document).ready(function() {
   $('.planet-7').click(function(){
     $('#broadcast').addClass('planet-7-gif').delay(10000).queue(function(next){
       $('#broadcast').removeClass('planet-7-gif');
       next();
-    })
-  })
-})
+  });
+});
 //end disco gif
 $(document).ready(function() {
   $('.planet-7').one("click", function(){
@@ -296,12 +205,29 @@ $(document).ready(function(e) {
 //space-tomatoes
 $(document).ready(function() {
   $('.pannel-center-left .grid-2 > div').click(function() {
-    $('.space-tomato').append("<img src='img/tomato.gif>'");
-    $('.space-tomatoes').show();
+    $('.space-tomatoes').addClass("space-tomatoes-show");
+    $('.space-tomatoes').show(10);
   })
   $(".wiper-switch input").click(function(){
-    $('.space-tomatoes').hide(500);
-    $('.space-tomato').children().remove(500);
-  })
+    $('.space-tomatoes').hide(700);
+    // $('.space-tomatoes').removeClass("space-tomatoes-show");
+  });
 })
 //end of space-tomatoes
+
+$(function(){
+    setInterval(randoFunction, 2000);  //1000 is milliseconds to next random check
+});
+
+function randoFunction(){
+    var chance = 50;  //1 in 10 chance to show the div
+    var rand = Math.floor(Math.random()*chance)+1;  //generate random number 1-chance
+    if(rand == 1) {
+        $('.space-tomatoes').show();
+        $('.space-tomatoes').addClass("space-tomatoes-show");
+    }
+    else if (rand == 2) {
+      $('.space-tomatoes').show();
+      $('.space-tomatoes').addClass("space-face");
+    }
+}
