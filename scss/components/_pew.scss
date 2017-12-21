@@ -7,6 +7,26 @@
   z-index: -90;
   margin-top: 100px;
 }
+.knobs.grid-4 div {
+    background: #000;
+    border: 1px solid;
+}
+
+.laser-lime {
+    color: lime;
+}
+
+.laser-red {
+    color: red;
+}
+
+.laser-blue {
+    color: blue;
+}
+
+.laser-orange {
+    color: orange;
+}
 .fire-animation {
   animation: fire .3s linear;
 }
