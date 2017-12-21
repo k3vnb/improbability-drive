@@ -925,22 +925,6 @@ img#ship {
     transition-delay: 1s !important;
     transition: all 1s ease-in; }
 
-.explore-planet-6 {
-  margin-top: -15100px;
-  margin-left: -14900px;
-  transition: all 3s ease;
-  width: 30000px;
-  height: 30000px;
-  z-index: 10; }
-
-.explore-planet-7 {
-  margin-top: -15100px;
-  margin-left: -14900px;
-  transition: all 3s ease;
-  width: 30000px;
-  height: 30000px;
-  z-index: 10; }
-
 .alien {
   height: 0;
   width: 1px; }
@@ -999,6 +983,28 @@ img#ship {
   align-items: center; }
 
 .return-to-orbit-5 {
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  border: lime solid 2px;
+  color: lime;
+  font-size: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.return-to-orbit-6 {
+  visibility: hidden;
+  width: 1px;
+  height: 1px;
+  border: lime solid 2px;
+  color: lime;
+  font-size: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.return-to-orbit-7 {
   visibility: hidden;
   width: 1px;
   height: 1px;
@@ -1243,13 +1249,17 @@ img#ship {
     box-shadow: 0px 2px 5px #ff08be8c; } }
 @keyframes disco-drop {
   0% {
-    top: -1000px; }
+    top: -1000px;
+    background-color: #ff000040; }
   20% {
-    top: 0%; }
+    top: 0%;
+    background-color: #1e00ff40; }
   60% {
-    top: 0%; }
+    top: 0%;
+    background-color: #ffee007d; }
   0% {
-    top: -1000px; } }
+    top: -1000px;
+    background-color: #ff8f00cf; } }
 @keyframes borderBlink1 {
   0% {
     box-shadow: inset 0 0 0px 0px black; }
@@ -1295,7 +1305,6 @@ img#ship {
   position: absolute;
   top: -1000px;
   left: 0%;
-  content: "<audio\a   src='http://developer.mozilla.org/@api/deki/files/2926/=AudioTest_(1).ogg'\a   autoplay>\a   Your browser does not support the <code>audio</code> element.\a</audio>";
   animation: disco-drop 10s ease-in infinite; }
 
 /*# sourceMappingURL=master.css.map */
