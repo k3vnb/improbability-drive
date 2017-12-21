@@ -57,10 +57,11 @@ $(document).ready(function(){
     $(this).siblings('.explore-text').toggleClass('explore-text-show');
     $(this).parent().toggleClass('on-top');
     setTimeout(function() {
-      $(".planet").toggleClass('go-away');
-      // $(this).parent('').toggleClass('go-away');
+      $(".planet").addClass('go-away');
       $(this).parent().toggleClass('on-top');
-    }, 2000);
+      $(".planet").removeClass('go-away');
+    }, 2400);
+
   });
   $("span.button").click(function() {
     var color = $(this).attr("data-color");

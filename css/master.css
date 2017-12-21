@@ -1152,7 +1152,11 @@ div#discoworld {
 
 .go-away {
   transition: all .1s ease-in;
-  opacity: 0 !important; }
+  opacity: 0; }
+
+.visable {
+  transition: all .1s ease-in;
+  opacity: 100; }
 
 .btns-column div, .round-btns div {
   width: 30px;

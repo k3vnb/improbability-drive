@@ -133,26 +133,6 @@ div#discoworld {
   cursor: pointer;
 }
 
-// .explore-planet-1 {
-//   margin-top: -14900px;
-//   margin-left: -14900px;
-//   @include explore-planet;
-// }
-// .explore-planet-2 {
-//   margin-top: -15100px;
-//   margin-left: -14900px;
-//   @include explore-planet;
-// }
-// .explore-planet-3 {
-//   margin-top: -15100px;
-//   margin-left: -14600px;
-//   @include explore-planet;
-// }
-// .explore-planet-4 {
-//   margin-top: -14800px;
-//   margin-left: -15400px;
-//   @include explore-planet;
-// }
 .explore-planet {
   margin-top: -15100px;
   margin-left: -14900px;
@@ -239,5 +219,9 @@ div#discoworld {
 }
 .go-away {
   transition:  all .1s ease-in;
-  opacity: 0 !important;
+  opacity: 0 ;
+}
+.visable {
+  transition:  all .1s ease-in;
+  opacity: 100 ;
 }
