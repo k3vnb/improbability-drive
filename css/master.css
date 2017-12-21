@@ -474,6 +474,7 @@ body {
     background-color: #3eff3e;
     box-shadow: inset 0 0 5px #fff, 0 0 5px #3eff3e, 0 0px 11px 4px #00000059; }
   .dial.dial-1 .led-1 {
+<<<<<<< HEAD
     animation: blueBlink 1s 0s infinite; }
   .dial.dial-1 .led-2 {
     animation: blueBlink 1s 0.1111111111s infinite; }
@@ -497,6 +498,31 @@ body {
     animation: greenBlink 4s 0.4444444444s infinite; }
   .dial.dial-4 .led-3 {
     animation: greenBlink 4s 0.8888888889s infinite; }
+=======
+    animation: blueBlink 1.9s 0s infinite; }
+  .dial.dial-1 .led-2 {
+    animation: blueBlink 1.9s 0.44s infinite; }
+  .dial.dial-1 .led-3 {
+    animation: blueBlink 1.8s 0.88s infinite; }
+  .dial.dial-2 .led-1 {
+    animation: orangeBlink 2.1s 0s infinite; }
+  .dial.dial-2 .led-2 {
+    animation: orangeBlink 2.4s 0.44s infinite; }
+  .dial.dial-2 .led-3 {
+    animation: orangeBlink 2.4s 0.88s infinite; }
+  .dial.dial-3 .led-1 {
+    animation: purpleBlink 3.1s 0s infinite; }
+  .dial.dial-3 .led-2 {
+    animation: purpleBlink 3.1s 0.44s infinite; }
+  .dial.dial-3 .led-3 {
+    animation: purpleBlink 3.5s 0.88s infinite; }
+  .dial.dial-4 .led-1 {
+    animation: greenBlink 5s 0s infinite; }
+  .dial.dial-4 .led-2 {
+    animation: greenBlink 4.5s 0.44s infinite; }
+  .dial.dial-4 .led-3 {
+    animation: greenBlink 4.9s 0.88s infinite; }
+>>>>>>> ab8321c46cf540b4d770ae5815f79a18e1b01961
 
 .grid-item {
   width: 44%;
@@ -1192,6 +1218,22 @@ div#discoworld {
   background: #d24141;
   height: 28px; }
 
+.hover {
+  animation: animate 0.25s infinite; }
+
+@keyframes animate {
+  0% {
+    cursor: url("../img/hover/frame1.gif") 16 0, auto; }
+  20% {
+    cursor: url("../img/hover/frame2.gif") 16 0, auto; }
+  40% {
+    cursor: url("../img/hover/frame3.gif") 16 0, auto; }
+  60% {
+    cursor: url("../img/hover/frame4.gif") 16 0, auto; }
+  80% {
+    cursor: url("../img/hover/frame5.gif") 16 0, auto; }
+  100% {
+    cursor: url("../img/hover/frame6.gif") 16 0, auto; } }
 .wipe-animation {
   animation: wipe 2s infinite;
   transform-origin: left; }
