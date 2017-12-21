@@ -11,7 +11,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  // overflow: hidden;
 }
 div#discoworld {
     pointer-events: none;
@@ -119,6 +118,7 @@ div#discoworld {
   top: 10%;
   left: 30%;
   transition: all 1s ease;
+<<<<<<< HEAD
   // transform: scale();
   // &:hover {
   //   transform: scale(2, 2);
@@ -151,6 +151,10 @@ div#discoworld {
 .planet{
     transition: all 4s cubic-bezier(0.55, -0.01, 0.2, 0.99);
 }
+=======
+}
+
+>>>>>>> 2276a08c7b4734abbb49f5c4a6b18678c3b37fc8
 .transform-active {
   // transition: all 4s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   width: 200px;
@@ -176,26 +180,6 @@ div#discoworld {
   cursor: pointer;
 }
 
-// .explore-planet-1 {
-//   margin-top: -14900px;
-//   margin-left: -14900px;
-//   @include explore-planet;
-// }
-// .explore-planet-2 {
-//   margin-top: -15100px;
-//   margin-left: -14900px;
-//   @include explore-planet;
-// }
-// .explore-planet-3 {
-//   margin-top: -15100px;
-//   margin-left: -14600px;
-//   @include explore-planet;
-// }
-// .explore-planet-4 {
-//   margin-top: -14800px;
-//   margin-left: -15400px;
-//   @include explore-planet;
-// }
 .explore-planet {
   margin-top: -15100px;
   margin-left: -14900px;
@@ -215,21 +199,6 @@ div#discoworld {
   height: 0;
   width: 1px;
 }
-// .alien-1 {
-//   width: 1px;
-// }
-// .alien-2 {
-//   width: 1px;
-// }
-// .alien-3 {
-//   width: 1px;
-// }
-// .alien-4 {
-//   width: 1px;
-// }
-// .alien-5 {
-//   width: 1px;
-// }
 
 .alien-grow {
   width: 400px;
@@ -302,16 +271,11 @@ div#discoworld {
   z-index: 11;
   box-shadow: 0px 2px 6px white;
 }
-// @keyframes {
-//   0% {
-//     background-color:
-//   }
-// }
 
 .on-top {
   z-index: 100;
 }
 .go-away {
   transition:  all .1s ease-in;
-  opacity: 0 !important;
+  opacity: 0 ;
 }
