@@ -12,7 +12,7 @@ html body {
   top: 0;
   display: inline-block;
   vertical-align: middle;
-  perspective: 1000000px;
+  perspective: 100000000px;
 }
 .center-warp {
   animation: centralize 4s cubic-bezier(0.55, -0.01, 0.2, 0.99), warpSpeed 4s cubic-bezier(1, 0, 1, 0);
@@ -28,6 +28,7 @@ html body {
 @keyframes warpSpeed {
   0% {
 animation-timing-function: cubic-bezier(0, .9, 0, 1);
+ perspective: 1000000px;
   }
   20% {
     perspective: 5px;

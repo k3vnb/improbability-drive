@@ -1,8 +1,9 @@
 @mixin wiper {
   position: absolute;
-  width: 35%;
+  width: 800px;
   height: 20px;
   background-color: grey;
+  z-index: -100;
 }
 .wipe-animation {
   animation: wipe 2s infinite;
@@ -41,7 +42,7 @@
   label {
   	cursor: pointer;
   	text-indent: -9999px;
-  	width: 40px;
+  	width: 60px;
   	height: 20px;
   	background: grey;
   	display: block;
@@ -72,7 +73,4 @@
   label:active:after {
   	width: 30px;
   }
-}
-.wiper {
-    z-index: -2;
 }
