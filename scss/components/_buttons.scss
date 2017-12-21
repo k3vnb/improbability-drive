@@ -38,6 +38,10 @@
 }
 
 
+.grid-3 div:hover {
+  animation: animate 0.25s infinite;
+}
+
 .hover {
   animation: animate 0.25s infinite;
 }
