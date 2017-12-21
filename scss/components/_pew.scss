@@ -1,7 +1,19 @@
-// .pew {
-//   height: 200px;
-//   width: 2px;
-//   background-color: #15ff00;
-//   position: absolute;
-//   left: 50%;
-// }
+.pew {
+  height: 200px;
+  width: 2px;
+  background-color: #15ff00;
+  position: absolute;
+  left: 50%;
+  animation: fire 1s linear;
+  z-index: -90;
+  margin-top: 100px;
+}
+.fire-animation {
+  animation: fire .1s linear;
+}
+@keyframes fire {
+  100% {
+    height: 0px;
+    margin-top: -200px;
+  }
+}
