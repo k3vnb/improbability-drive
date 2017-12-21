@@ -13,6 +13,9 @@
   background-position: 50% 50%;
   // overflow: hidden;
 }
+div#discoworld {
+    pointer-events: none;
+}
 .explore {
   z-index: 10;
   visibility: hidden;

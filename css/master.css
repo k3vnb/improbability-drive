@@ -852,6 +852,9 @@ img#ship {
   animation: meters 120s ease infinite; }
 
 /*space*/
+div#discoworld {
+  pointer-events: none; }
+
 .explore {
   z-index: 10;
   visibility: hidden;
