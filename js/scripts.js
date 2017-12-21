@@ -66,7 +66,7 @@ $(document).ready(function() {
 })
 //end disco gif
 $(document).ready(function() {
-  $('.planet-7').click(function(){
+  $('.planet-7').one("click", function(){
     $('#discoworld').addClass('discoworlds').delay(10000).queue(function(next){
       $('#discoworld').removeClass('discoworlds');
       next();
