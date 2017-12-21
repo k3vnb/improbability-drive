@@ -1,22 +1,66 @@
 $(document).ready(function(){
+  var selfDestruct= document.createElement("audio");
+  selfDestruct.src="audio/selfDestruct.mp3";
+  selfDestruct.volume=1;
+  selfDestruct.autoplay=false;
+  selfDestruct.autoload=true;
+
+  var buttonClick= document.createElement("audio");
+  buttonClick.src="audio/button-3.wav";
+  buttonClick.volume=1;
+  buttonClick.autoplay=false;
+  buttonClick.autoload=true;
+
+  var pewSound = document.createElement("audio");
+  pewSound.src="audio/pew.wav";
+  pewSound.volume=1;
+  pewSound.autoplay=false;
+  pewSound.autoload=true;
+
   $(".laser-lime").click(function() {
     $(".pew").css('background-color', "lime");
     $(".pew").toggleClass('fire-animation');
+    pewSound.pause();
+    pewSound.currentTime= 0;
+    pewSound.play();
+    setTimeout(function() {
+      $(".pew").removeClass('fire-animation')
+    }, 500);
   });
   $(".laser-red").click(function() {
     $(".pew").css('background-color', "red");
     $(".pew").toggleClass('fire-animation');
+    pewSound.pause();
+    pewSound.currentTime= 0;
+    pewSound.play();
+    setTimeout(function() {
+      $(".pew").removeClass('fire-animation')
+    }, 500);
   });
   $(".laser-blue").click(function() {
     $(".pew").css('background-color', "blue");
     $(".pew").toggleClass('fire-animation');
+    pewSound.pause();
+    pewSound.currentTime= 0;
+    pewSound.play();
+    setTimeout(function() {
+      $(".pew").removeClass('fire-animation')
+    }, 500);
   });
   $(".laser-orange").click(function() {
     $(".pew").css('background-color', "orange");
     $(".pew").toggleClass('fire-animation');
+    pewSound.pause();
+    pewSound.currentTime= 0;
+    pewSound.play();
+    setTimeout(function() {
+      $(".pew").removeClass('fire-animation')
+    }, 500);
   });
   $(".self-destruct").click(function() {
+      selfDestruct.play();
     $('.ctrl-pnl').toggleClass('self-destruct-animation').delay(6000).queue(function(next){
+
         $(".ctrl-pnl").removeClass('self-destruct-animation');
         next();
     });
@@ -31,6 +75,9 @@ $(document).ready(function(){
     $(".planet p").css("color", color);
     $(".explore, .return").css("border-color", color);
     $("span.button").mousedown()
+    buttonClick.pause();
+    buttonClick.currentTime= 0;
+    buttonClick.play();
   });
 
 

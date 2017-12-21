@@ -781,8 +781,8 @@ div {
   100% {
     background: red; } }
 .pew {
-  height: 200px;
-  width: 2px;
+  height: 252px;
+  width: 4px;
   background-color: #15ff00;
   position: absolute;
   left: 50%;
@@ -1154,10 +1154,6 @@ div#discoworld {
 .go-away {
   transition: all .1s ease-in;
   opacity: 0; }
-
-.visable {
-  transition: all .1s ease-in;
-  opacity: 100; }
 
 .btns-column div, .round-btns div {
   width: 30px;
