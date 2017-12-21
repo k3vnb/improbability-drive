@@ -17,7 +17,6 @@ $(document).ready(function(){
     $("span.button").mousedown()
   });
 
-<<<<<<< HEAD
 
 
   $(".planet-1").click(function() {
@@ -157,33 +156,6 @@ $(document).ready(function(){
       $('.planet-2, .planet-3, .planet-4, .planet-1, .planet-6').toggleClass('go-away');
       $('.planet-5').removeClass('on-top');
     }, 2000);
-=======
-  $(".planet").click(function() {
-    $(this).toggleClass('transform-active');
-    $(this).children('.explore').toggleClass('explore-show');
-    $(this).children('.explore-text').toggleClass('explore-text-show');
-    $(this).siblings(".planet").toggleClass('go-away');
-  });
-  $(".explore").click(function() {
-    $(this).parent().toggleClass('explore-planet')
-    $(this).siblings('.alien').toggleClass('alien-grow')
-    $(this).siblings('.return-to-orbit').toggleClass('return-to-orbit-show')
-
-  })
-  $(".return").click(function() {
-    $(this).parent().toggleClass('explore-planet')
-    $(this).siblings('.alien').toggleClass('alien-grow')
-    $(this).siblings('.alien').toggleClass('alien-shrink')
-    $(this).siblings('.return').toggleClass('return-to-orbit-show')
-    $(this).parent().toggleClass('transform-active');
-    $(this).siblings('.explore').toggleClass('explore-show');
-    $(this).siblings('.explore-text').toggleClass('explore-text-show');
-    $(this).parent().addClass('on-top');
-    // setTimeout(function() {
-      $(this).parent().siblings().toggleClass('go-away');
-      $(this).parent().removeClass('on-top');
-    // }, 2000);
->>>>>>> fc30e556d6f109f39c35e1e050e313feac61f01b
   })
   $("span.button").click(function() {
     var color = $(this).attr("data-color");
