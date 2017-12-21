@@ -1,4 +1,20 @@
 $(document).ready(function(){
+  $(".laser-lime").click(function() {
+    $(".pew").css('background-color', "lime");
+    $(".pew").toggleClass('fire-animation');
+  });
+  $(".laser-red").click(function() {
+    $(".pew").css('background-color', "red");
+    $(".pew").toggleClass('fire-animation');
+  });
+  $(".laser-blue").click(function() {
+    $(".pew").css('background-color', "blue");
+    $(".pew").toggleClass('fire-animation');
+  });
+  $(".laser-orange").click(function() {
+    $(".pew").css('background-color', "orange");
+    $(".pew").toggleClass('fire-animation');
+  });
   $(".self-destruct").click(function() {
     $('.ctrl-pnl').toggleClass('self-destruct-animation').delay(6000).queue(function(next){
         $(".ctrl-pnl").removeClass('self-destruct-animation');

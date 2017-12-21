@@ -4,12 +4,11 @@
   background-color: #15ff00;
   position: absolute;
   left: 50%;
-  animation: fire 1s linear;
   z-index: -90;
   margin-top: 100px;
 }
 .fire-animation {
-  animation: fire .1s linear;
+  animation: fire .3s linear;
 }
 @keyframes fire {
   100% {
