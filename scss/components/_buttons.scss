@@ -33,3 +33,29 @@
 .btns-column div, .round-btns div {
 
 }
+
+
+.hover {
+  animation: animate 0.25s infinite;
+}
+
+@keyframes animate{
+  0%{
+    cursor: url("../img/hover/frame1.gif") 16 0, auto;
+  }
+  20%{
+    cursor: url("../img/hover/frame2.gif") 16 0, auto;
+  }
+  40%{
+    cursor: url("../img/hover/frame3.gif") 16 0, auto;
+  }
+  60%{
+    cursor: url("../img/hover/frame4.gif") 16 0, auto;
+  }
+  80%{
+    cursor: url("../img/hover/frame5.gif") 16 0, auto;
+  }
+  100%{
+    cursor: url("../img/hover/frame6.gif") 16 0, auto;
+  }
+}
