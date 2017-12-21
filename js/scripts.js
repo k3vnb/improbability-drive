@@ -1,4 +1,30 @@
 $(document).ready(function(){
+
+  var alert= document.createElement("audio");
+  alert.src="audio/red-alert.mp3";
+  alert.volume=1;
+  alert.autoplay=false;
+  alert.autoload=true;
+
+  var switchToggle= document.createElement("audio");
+  switchToggle.src="audio/switch.mp3";
+  switchToggle.volume=1;
+  switchToggle.autoplay=false;
+  switchToggle.autoload=true;
+
+  var engine= document.createElement("audio");
+  engine.src="audio/engine.mp3";
+  engine.volume=1;
+  engine.autoplay=true;
+  engine.autoload=true;
+  engine.loop=true;
+
+  var warp= document.createElement("audio");
+  warp.src="audio/warp.mp3";
+  warp.volume=1;
+  warp.autoplay=false;
+  warp.autoload=true;
+
   var selfDestruct= document.createElement("audio");
   selfDestruct.src="audio/selfDestruct.mp3";
   selfDestruct.volume=1;
@@ -10,6 +36,12 @@ $(document).ready(function(){
   buttonClick.volume=1;
   buttonClick.autoplay=false;
   buttonClick.autoload=true;
+
+  var buttonClick2= document.createElement("audio");
+  buttonClick2.src="audio/button-32.wav";
+  buttonClick2.volume=1;
+  buttonClick2.autoplay=false;
+  buttonClick2.autoload=true;
 
   var pewSound = document.createElement("audio");
   pewSound.src="audio/pew.wav";
@@ -58,6 +90,8 @@ $(document).ready(function(){
     }, 500);
   });
   $(".self-destruct").click(function() {
+      engine.pause();
+      alert.play();
       selfDestruct.play();
     $('.ctrl-pnl').toggleClass('self-destruct-animation').delay(17000).queue(function(next){
 
@@ -67,6 +101,7 @@ $(document).ready(function(){
   });
 
   $(".wiper-switch input").click(function() {
+    switchToggle.play();
     $('.wiper').toggleClass('wipe-animation');
   });
 
@@ -83,6 +118,8 @@ $(document).ready(function(){
 
 
   $(".planet").click(function() {
+    warp.play();
+
       var thisBack = $(this).attr('data-stars');
       $('.space').delay(5000).queue(function(){
         $(this).toggleClass('zoom');
@@ -126,6 +163,9 @@ $(document).ready(function(){
     $("span.button").mousedown()
   });
   $(".btn-grid-flat div").click(function() {
+    buttonClick2.pause();
+    buttonClick2.currentTime= 0;
+    buttonClick2.play();
     $(this).addClass('active');
     $(this).parent().children().not(this).removeClass('active');
   });
