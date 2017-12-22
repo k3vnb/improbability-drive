@@ -11,8 +11,11 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  // overflow: hidden;
 }
+div#discoworld {
+    pointer-events: none;
+}
+
 .explore {
   z-index: 10;
   visibility: hidden;
@@ -89,6 +92,17 @@
   left: 97%;
   background-image: url(../img/planet-6.png);
 }
+.alien-grow {
+    position: fixed;
+    top: 3%;
+    left: 50%;
+}
+
+.return {
+    position: fixed;
+    top: 1%;
+    right: 1%;
+}
 .planet-7 {
   @include planet;
   top: 15%;
@@ -104,44 +118,18 @@
   top: 10%;
   left: 30%;
   transition: all 1s ease;
-  // transform: scale();
-  // &:hover {
-  //   transform: scale(2, 2);
-  // }
 }
-// .planet-6 {
-//   width: 90%;
-//   height: 90%;
-//   z-index: 99;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   flex-direction: column;
-//   background-size: cover;
-//   background-repeat: no-repeat;
-//   background-position: 50% 50%;
-//   background-image: url(../img/planet-6.png);
-// }
-// .new-planets2 {
-//   @extend .new-planets;
-//   top: 20%;
-//   left: 94%
-// }
 
-// .planet-7 {
-//   @extend .planet-6;
-//   background-image: url(../img/discoball.png);
-// }
-
-
+.planet{
+    transition: all 4s cubic-bezier(0.55, -0.01, 0.2, 0.99);
+}
 .transform-active {
-  transition: all 4s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   width: 200px;
   height: 200px;
   top: 25%;
   left: 45%;
   .explore-text{
-      transition: all 2s ease-in;
+      transition: font-size 2s ease-in;
       font-size: 50px;
   }
 }
@@ -159,26 +147,6 @@
   cursor: pointer;
 }
 
-// .explore-planet-1 {
-//   margin-top: -14900px;
-//   margin-left: -14900px;
-//   @include explore-planet;
-// }
-// .explore-planet-2 {
-//   margin-top: -15100px;
-//   margin-left: -14900px;
-//   @include explore-planet;
-// }
-// .explore-planet-3 {
-//   margin-top: -15100px;
-//   margin-left: -14600px;
-//   @include explore-planet;
-// }
-// .explore-planet-4 {
-//   margin-top: -14800px;
-//   margin-left: -15400px;
-//   @include explore-planet;
-// }
 .explore-planet {
   margin-top: -15100px;
   margin-left: -14900px;
@@ -198,21 +166,6 @@
   height: 0;
   width: 1px;
 }
-// .alien-1 {
-//   width: 1px;
-// }
-// .alien-2 {
-//   width: 1px;
-// }
-// .alien-3 {
-//   width: 1px;
-// }
-// .alien-4 {
-//   width: 1px;
-// }
-// .alien-5 {
-//   width: 1px;
-// }
 
 .alien-grow {
   width: 400px;
@@ -257,12 +210,65 @@
   left: 0%;
   animation: disco-drop 10s ease-in infinite;
 }
+.space-tomatoes-show {
+  background-image: url(../img/tomato-frame-4.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: background-image 1s;
+  animation: bg 2s ease;
+}
+.space-face {
+  background-image: url(../img/deadface.png);
+  max-height: 200px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  // transition: background-image 1s;
+  animation: space-faces 1.5s ease-in;
+}
+@keyframes bg {
+  0% {
+    background-image: url(../img/tomato-frame-1.gif);
+  }
+  10% {
+    background-image: url(../img/tomato-frame-2.gif);
+  }
+  20% {
+    background-image: url(../img/tomato-frame-3.gif);
+  }
+  50% {
+    background-image: url(../img/tomato-frame-4.gif);
+  }
+}
+@keyframes space-faces {
+  0% {
+    background-image: url(../img/hello.png);
+    background-size: 2px;
+  }
+  98% {background-image: url(../img/hello.png)}
+  99% {
+    background-image: url(../img/deadface.png);
+    background-size: 200px;
+  }
+}
 
+.star {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  background-color: white;
+  z-index: 11;
+  box-shadow: 0px 2px 6px white;
+}
 
 .on-top {
   z-index: 100;
 }
 .go-away {
   transition:  all .1s ease-in;
-  opacity: 0 !important;
+  opacity: 0 ;
 }

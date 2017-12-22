@@ -1,28 +1,115 @@
 $(document).ready(function(){
+
+  var alert= document.createElement("audio");
+  alert.src="audio/red-alert.mp3";
+  alert.volume=1;
+  alert.autoplay=false;
+  alert.autoload=true;
+
+  var switchToggle= document.createElement("audio");
+  switchToggle.src="audio/switch.mp3";
+  switchToggle.volume=1;
+  switchToggle.autoplay=false;
+  switchToggle.autoload=true;
+
+  var engine= document.createElement("audio");
+  engine.src="audio/engine.mp3";
+  engine.volume=1;
+  engine.autoplay=true;
+  engine.autoload=true;
+  engine.loop=true;
+
+  var warp= document.createElement("audio");
+  warp.src="audio/warp.mp3";
+  warp.volume=1;
+  warp.autoplay=false;
+  warp.autoload=true;
+
+  var selfDestruct= document.createElement("audio");
+  selfDestruct.src="audio/selfDestruct.mp3";
+  selfDestruct.volume=1;
+  selfDestruct.autoplay=false;
+  selfDestruct.autoload=true;
+
+  var buttonClick= document.createElement("audio");
+  buttonClick.src="audio/button-3.wav";
+  buttonClick.volume=1;
+  buttonClick.autoplay=false;
+  buttonClick.autoload=true;
+
+  var buttonClick2= document.createElement("audio");
+  buttonClick2.src="audio/button-32.wav";
+  buttonClick2.volume=1;
+  buttonClick2.autoplay=false;
+  buttonClick2.autoload=true;
+
+  var pewSound = document.createElement("audio");
+  pewSound.src="audio/pew.wav";
+  pewSound.volume=1;
+  pewSound.autoplay=false;
+  pewSound.autoload=true;
+
   $(".laser-lime").click(function() {
     $(".pew").css('background-color', "lime");
     $(".pew").toggleClass('fire-animation');
+    pewSound.pause();
+    pewSound.currentTime= 0;
+    pewSound.play();
+    setTimeout(function() {
+      $(".pew").removeClass('fire-animation')
+    }, 500);
   });
   $(".laser-red").click(function() {
     $(".pew").css('background-color', "red");
     $(".pew").toggleClass('fire-animation');
+    pewSound.pause();
+    pewSound.currentTime= 0;
+    pewSound.play();
+    setTimeout(function() {
+      $(".pew").removeClass('fire-animation')
+    }, 500);
   });
   $(".laser-blue").click(function() {
     $(".pew").css('background-color', "blue");
     $(".pew").toggleClass('fire-animation');
+    pewSound.pause();
+    pewSound.currentTime= 0;
+    pewSound.play();
+    setTimeout(function() {
+      $(".pew").removeClass('fire-animation')
+    }, 500);
   });
   $(".laser-orange").click(function() {
     $(".pew").css('background-color', "orange");
     $(".pew").toggleClass('fire-animation');
+    pewSound.pause();
+    pewSound.currentTime= 0;
+    pewSound.play();
+    setTimeout(function() {
+      $(".pew").removeClass('fire-animation')
+    }, 500);
   });
   $(".self-destruct").click(function() {
-    $('.ctrl-pnl').toggleClass('self-destruct-animation').delay(6000).queue(function(next){
+      engine.pause();
+      alert.play();
+      selfDestruct.play();
+      $('body').addClass('shake');
+    $('.ctrl-pnl').toggleClass('self-destruct-animation').delay(17000).queue(function(next){
         $(".ctrl-pnl").removeClass('self-destruct-animation');
+        $('body').removeClass('shake');
+
+        $('.pnl').each(function(){
+            var randomX = Math.floor(Math.random()* 100) + 1;
+            var randomy = Math.floor(Math.random()* 100) + 1;
+            var randomz = Math.floor(Math.random()* 100) + 1;
+            $(this).css({'transform': 'translateX(' + randomX + 'px) translateY(' + randomy + 'px) translateZ(' + randomz + 'px) rotateX(' + randomX + 'deg) rotateY(' + randomy + 'deg) rotateZ(' + randomz + 'deg)'})
+        });
         next();
     });
   });
 
   $(".wiper-switch input").click(function() {
+    switchToggle.play();
     $('.wiper').toggleClass('wipe-animation');
   });
 
@@ -31,15 +118,29 @@ $(document).ready(function(){
     $(".planet p").css("color", color);
     $(".explore, .return").css("border-color", color);
     $("span.button").mousedown()
+    buttonClick.pause();
+    buttonClick.currentTime= 0;
+    buttonClick.play();
   });
 
 
 
   $(".planet").click(function() {
+    warp.play();
+
+      var thisBack = $(this).attr('data-stars');
+      $('.space').delay(5000).queue(function(){
+        $(this).toggleClass('zoom');
+    });
     $(this).toggleClass('transform-active');
     $(this).children('.explore').toggleClass('explore-show');
     $(this).children('.explore-text').toggleClass('explore-text-show');
     $(this).siblings(".planet").toggleClass('go-away');
+    if ($('.side').attr('style') === 'background-image: url("img/' + thisBack + '");') {
+        $('.side').css('background-image', '');
+    } else {
+        $('.side').css('background-image', 'url(img/' + thisBack + ')');
+    }
   });
   $(".explore").click(function() {
     $(this).parent().toggleClass('explore-planet')
@@ -48,19 +149,21 @@ $(document).ready(function(){
 
   })
   $(".return").click(function() {
-    $(this).parent().toggleClass('explore-planet')
-    $(this).siblings('.alien').toggleClass('alien-grow')
-    $(this).siblings('.alien').toggleClass('alien-shrink')
-    $(this).siblings('.return').toggleClass('return-to-orbit-show')
+    $(this).parent().toggleClass('explore-planet');
+    $(this).siblings('.alien').toggleClass('alien-grow');
+    $(this).siblings('.alien').toggleClass('alien-shrink');
+    $(this).siblings('.return').toggleClass('return-to-orbit-show');
     $(this).parent().toggleClass('transform-active');
     $(this).siblings('.explore').toggleClass('explore-show');
     $(this).siblings('.explore-text').toggleClass('explore-text-show');
-    $(this).parent().addClass('on-top');
-    // setTimeout(function() {
-      $(this).parent().siblings().toggleClass('go-away');
-      $(this).parent().removeClass('on-top');
-    // }, 2000);
-  })
+    $(this).parent().toggleClass('on-top');
+    setTimeout(function() {
+      $(".planet").addClass('go-away');
+      $(".planet").removeClass('on-top');
+      $(".planet").removeClass('go-away');
+    }, 2400);
+
+  });
   $("span.button").click(function() {
     var color = $(this).attr("data-color");
     $(".planet p").css("color", color);
@@ -68,138 +171,41 @@ $(document).ready(function(){
     $("span.button").mousedown()
   });
   $(".btn-grid-flat div").click(function() {
+    buttonClick2.pause();
+    buttonClick2.currentTime= 0;
+    buttonClick2.play();
     $(this).addClass('active');
     $(this).parent().children().not(this).removeClass('active');
   });
-    $(".ch-1").click(function() {
-      $('#broadcast').addClass('channel-1').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-1');
-        next();
+
+
+//change the channel
+  $('.channel').click(function(){
+      $('#broadcast').html(``);
+      $('#broadcast').clearQueue();
+
+      var thisChn = $(this).attr('data-channel');
+      $('#broadcast').html(`<img src="img/` + thisChn + `.gif">`).delay(5000).queue(function(next){
+         $('#broadcast').html(``);
       });
-    });
-    $(".ch-2").click(function() {
-      $('#broadcast').addClass('channel-2').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-2');
-        next();
-      });
-    });
-    $(".ch-3").click(function() {
-      $('#broadcast').addClass('channel-3').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-3');
-        next();
-      });
-    });
-    $(".ch-4").click(function() {
-      $('#broadcast').addClass('channel-4').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-4');
-        next();
-      });
-    });
-    $(".ch-5").click(function() {
-      $('#broadcast').addClass('channel-5').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-5');
-        next();
-      });
-    });
-    $(".ch-6").click(function() {
-      $('#broadcast').addClass('channel-6').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-6');
-        next();
-      });
-    });
-    $(".ch-7").click(function() {
-      $('#broadcast').addClass('channel-7').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-7');
-        next();
-      });
-    });
-    $(".ch-8").click(function() {
-      $('#broadcast').addClass('channel-8').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-8');
-        next();
-      });
-    });
-    $(".ch-9").click(function() {
-      $('#broadcast').addClass('channel-9').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-9');
-        next();
-      });
-    });
-    $(".ch-10").click(function() {
-      $('#broadcast').addClass('channel-10').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-10');
-        next();
-      });
-    });
-    $(".ch-11").click(function() {
-      $('#broadcast').addClass('channel-11').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-11');
-        next();
-      });
-    });
-    $(".ch-12").click(function() {
-      $('#broadcast').addClass('channel-12').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-12');
-        next();
-      });
-    });
-    $(".ch-13").click(function() {
-      $('#broadcast').addClass('channel-13').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-13');
-        next();
-      });
-    });
-    $(".ch-14").click(function() {
-      $('#broadcast').addClass('channel-14').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-14');
-        next();
-      });
-    });
-    $(".ch-15").click(function() {
-      $('#broadcast').addClass('channel-15').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-15');
-        next();
-      });
-    });
-    $(".ch-16").click(function() {
-      $('#broadcast').addClass('channel-16').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-16');
-        next();
-      });
-    });
-    $(".ch-17").click(function() {
-      $('#broadcast').addClass('channel-17').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-17');
-        next();
-      });
-    });
-    $(".ch-18").click(function() {
-      $('#broadcast').addClass('channel-18').delay(5000).queue(function(next){
-        $('#broadcast').removeClass('channel-18');
-        next();
-      });
-    });
+  })
 });
 
 //harlem globetrotter gif
-$(document).ready(function() {
   $('.planet-6').click(function(){
     $('#broadcast').addClass('planet-6-gif').delay(10000).queue(function(next){
       $('#broadcast').removeClass('planet-6-gif');
       next();
-    })
-  })
-})
+  });
+});
 //end globetrotter gif
 //disco gif
-$(document).ready(function() {
   $('.planet-7').click(function(){
     $('#broadcast').addClass('planet-7-gif').delay(10000).queue(function(next){
       $('#broadcast').removeClass('planet-7-gif');
       next();
-    })
-  })
-})
+  });
+});
 //end disco gif
 $(document).ready(function() {
   $('.planet-7').one("click", function(){
@@ -222,15 +228,10 @@ $(document).ready(function() {
 //planet zoom locator
 $(document).ready(function(e) {
     $('.planets > div').click(function(e) {
-
       var xPercent = e.pageX / $(window).width();
       var yPercent = e.pageY / $(window).height();
-      // var xPosition = Math.floor(xPercent*100);
-      // var yPosition = Math.floor(yPercent*100);
       var xPosition = Math.floor(xPercent*100);
       var yPosition = Math.floor(yPercent*100);
-      console.log(xPosition);
-      console.log(yPosition);
       $('#warp').css({perspectiveOrigin: xPosition + "vw " + yPosition + "vh"});
       $('#warp').addClass("center-warp").delay(5000).queue(function(next){
         $('#warp').removeClass("center-warp");
@@ -251,13 +252,39 @@ $(document).ready(function(e) {
 //end of sliders going red
 //space-tomatoes
 $(document).ready(function() {
-  $('.grid-2 > div').click(function() {
-    $('.space-tomato').append("<img src='img/tomato.gif>'");
-    $('.space-tomatoes').show();
+  var act = $('.wiper').hasClass("wipe-animation");
+
+  if(act){
+    $('.space-tomatoes').hide(700);
+  }
+  $('.pannel-center-left .grid-2 > div').click(function() {
+    $('.space-tomatoes').addClass("space-tomatoes-show");
+    $('.space-tomatoes').show(10);
   })
   $(".wiper-switch input").click(function(){
-    $('.space-tomatoes').hide(500);
-    $('.space-tomato').children().remove(500);
-  })
-})
+    $('.space-tomatoes').hide(700);
+    // $('.space-tomatoes').removeClass("space-tomatoes-show");
+      });
+  });
 //end of space-tomatoes
+
+$(function(){
+    setInterval(randoFunction, 2000);  //2000 is milliseconds to next random check
+});
+
+function randoFunction(){
+    var chance = 60;  //1 in 60 chance to show the div
+    var rand = Math.floor(Math.random()*chance)+1;  //generate random number 1-chance
+    if(rand == 1) {
+        $('.space-tomatoes').show();
+        $('.space-tomatoes').addClass("space-tomatoes-show");
+    }
+    else if (rand == 2) {
+      $('.space-tomatoes').show();
+      $('.space-tomatoes').addClass("space-face");
+    }
+    var act = $(".wiper").hasClass('wipe-animation');
+    if(act) {
+      $(".space-tomatoes").hide(1200);
+    }
+}

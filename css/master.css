@@ -46,14 +46,16 @@ html body {
   animation-delay: 6s; }
 
 .side {
-  background: url("../img/hyperdrive.jpg") center;
+  background-image: url("../img/Star-field-3.JPG");
+  background-position: center;
   background-size: cover;
   width: 100%;
   height: 100%;
   position: absolute;
   opacity: 0;
   animation: fade 12s infinite linear;
-  animation-delay: 0; }
+  animation-delay: 0;
+  transition: background 5s ease; }
 
 .space:nth-child(2) .side {
   animation-delay: 6s; }
@@ -245,6 +247,7 @@ html body {
   background-position: center; }
 
 body {
+  font-family: Geo, Orbitron;
   margin: 0;
   cursor: url("../img/cursor.png"), auto; }
 
@@ -406,7 +409,8 @@ body {
   position: relative;
   top: -85px;
   box-shadow: 0 0 0 53px red;
-  max-height: 378px; }
+  max-height: 378px;
+  transition: .1s ease; }
   .pnl > div {
     grid-gap: 5px;
     padding: 5px; }
@@ -716,7 +720,27 @@ div {
 .self-destruct {
   background-color: red;
   border-radius: 50%;
-  margin: 10%; }
+  margin: 10%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: -19px 6px 0 2px #000; }
+  .self-destruct:after {
+    content: "NO!";
+    font-size: 86px;
+    position: relative;
+    top: 12px; }
+
+.smaller {
+  max-width: 50%;
+  margin: 0 25%; }
+
+.shake {
+  position: relative;
+  height: 100vh !important;
+  animation: shake-x-small .7s infinite, shake-y-small .6s infinite; }
 
 .self-destruct-animation {
   animation: shake-x .7s infinite, shake-y .6s infinite; }
@@ -725,7 +749,7 @@ div {
     .self-destruct-animation #broadcast:after {
       content: "";
       font-size: 310px;
-      animation: countDown 6s linear; }
+      animation: countDown 10s 7s linear; }
   .self-destruct-animation .btns-column div {
     animation: btns-column-destruct 2s ease-in infinite; }
   .self-destruct-animation .pannel-left {
@@ -743,14 +767,24 @@ div {
 
 @keyframes countDown {
   0% {
-    content: "5"; }
+    content: "10"; }
+  10% {
+    content: "9"; }
   20% {
-    content: "4"; }
+    content: "8"; }
+  30% {
+    content: "7"; }
   40% {
-    content: "3"; }
+    content: "6"; }
+  50% {
+    content: "5"; }
   60% {
-    content: "2"; }
+    content: "4"; }
+  70% {
+    content: "3"; }
   80% {
+    content: "2"; }
+  90% {
     content: "1"; } }
 @keyframes shake-x {
   10%, 90% {
@@ -761,6 +795,15 @@ div {
     left: -40px; }
   40%, 60% {
     left: 40px; } }
+@keyframes shake-x-small {
+  10%, 90% {
+    left: -2px; }
+  20%, 80% {
+    left: 5px; }
+  30%, 50%, 70% {
+    left: -8px; }
+  40%, 60% {
+    left: 8px; } }
 @keyframes shake-y {
   10%, 90% {
     bottom: 0px; }
@@ -770,6 +813,15 @@ div {
     bottom: -30px; }
   40%, 60% {
     bottom: 50px; } }
+@keyframes shake-y-small {
+  10%, 90% {
+    left: -2px; }
+  20%, 80% {
+    left: 5px; }
+  30%, 50%, 70% {
+    left: -8px; }
+  40%, 60% {
+    left: 8px; } }
 @keyframes btn-blink {
   0% {
     background: black; }
@@ -780,8 +832,8 @@ div {
   100% {
     background: red; } }
 .pew {
-  height: 200px;
-  width: 2px;
+  height: 252px;
+  width: 4px;
   background-color: #15ff00;
   position: absolute;
   left: 50%;
@@ -836,6 +888,9 @@ img#ship {
   animation: meters 120s ease infinite; }
 
 /*space*/
+div#discoworld {
+  pointer-events: none; }
+
 .explore {
   z-index: 10;
   visibility: hidden;
@@ -954,6 +1009,16 @@ img#ship {
   left: 97%;
   background-image: url(../img/planet-6.png); }
 
+.alien-grow {
+  position: fixed;
+  top: 3%;
+  left: 50%; }
+
+.return {
+  position: fixed;
+  top: 1%;
+  right: 1%; }
+
 .planet-7 {
   width: 20px;
   height: 20px;
@@ -979,14 +1044,16 @@ img#ship {
   left: 30%;
   transition: all 1s ease; }
 
+.planet {
+  transition: all 4s cubic-bezier(0.55, -0.01, 0.2, 0.99); }
+
 .transform-active {
-  transition: all 4s cubic-bezier(0.55, -0.01, 0.2, 0.99);
   width: 200px;
   height: 200px;
   top: 25%;
   left: 45%; }
   .transform-active .explore-text {
-    transition: all 2s ease-in;
+    transition: font-size 2s ease-in;
     font-size: 50px; }
 
 .explore-show {
@@ -1117,12 +1184,57 @@ img#ship {
   left: 0%;
   animation: disco-drop 10s ease-in infinite; }
 
+.space-tomatoes-show {
+  background-image: url(../img/tomato-frame-4.gif);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: background-image 1s;
+  animation: bg 2s ease; }
+
+.space-face {
+  background-image: url(../img/deadface.png);
+  max-height: 200px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: space-faces 1.5s ease-in; }
+
+@keyframes bg {
+  0% {
+    background-image: url(../img/tomato-frame-1.gif); }
+  10% {
+    background-image: url(../img/tomato-frame-2.gif); }
+  20% {
+    background-image: url(../img/tomato-frame-3.gif); }
+  50% {
+    background-image: url(../img/tomato-frame-4.gif); } }
+@keyframes space-faces {
+  0% {
+    background-image: url(../img/hello.png);
+    background-size: 2px; }
+  98% {
+    background-image: url(../img/hello.png); }
+  99% {
+    background-image: url(../img/deadface.png);
+    background-size: 200px; } }
+.star {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  background-color: white;
+  z-index: 11;
+  box-shadow: 0px 2px 6px white; }
+
 .on-top {
   z-index: 100; }
 
 .go-away {
   transition: all .1s ease-in;
-  opacity: 0 !important; }
+  opacity: 0; }
 
 .btns-column div, .round-btns div {
   width: 30px;
@@ -1162,6 +1274,25 @@ img#ship {
   background: #d24141;
   height: 28px; }
 
+.grid-3 div:hover {
+  animation: animate 0.25s infinite; }
+
+.hover {
+  animation: animate 0.25s infinite; }
+
+@keyframes animate {
+  0% {
+    cursor: url("../img/hover/frame1.gif") 16 0, auto; }
+  20% {
+    cursor: url("../img/hover/frame2.gif") 16 0, auto; }
+  40% {
+    cursor: url("../img/hover/frame3.gif") 16 0, auto; }
+  60% {
+    cursor: url("../img/hover/frame4.gif") 16 0, auto; }
+  80% {
+    cursor: url("../img/hover/frame5.gif") 16 0, auto; }
+  100% {
+    cursor: url("../img/hover/frame6.gif") 16 0, auto; } }
 .wipe-animation {
   animation: wipe 2s infinite;
   transform-origin: left; }
