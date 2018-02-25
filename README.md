@@ -5,6 +5,9 @@
 
 ### Author: Colin Worf, Connor Miller, Kevin Boyle, Zach Marston
 
+### Screenshot:
+![Screenshot](img/screenshot1.png?raw=true)
+
 ## Description
 
   This project uses sass and css animations to emulate the cockpit of a spaceship.
